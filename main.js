@@ -1,32 +1,32 @@
 const leftBtn = document.getElementById('left');
-const rightbBtn = document.getElementById('right');
+const rightBtn = document.getElementById('right');
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slide');
+let currentIndex = 0;
 
-
-const a = document.getElementById('swipea')
-const image = document.getElementById('img1');
-const rasmlar = ['./img/Banner 1-01.jpg', './img/Banner 2-01.jpg', './img/Banner 3-01.jpg' , './img/Server-01.jpg'];
-const num = document.getElementById('number');
-const linklar = ['https://www.instagram.com/serverstore_uz?igsh=aDk2ZW82bXI2MTJy','https://youtube.com/@server_store?si=Puv0deeLdw3MUrJy  ','https://www.facebook.com/profile.php?id=61559339369006','https://t.me/Serverstoreuz']
-
-
-
-
-// chap ong button lar uchun
-let active = 0;
+// Function to calculate slide width dynamically
 const changeSlide = (direction) => {
-    active += direction;
+    currentIndex += direction;
 
-    if (active < 0) active = rasmlar.length - 1;
-    if (active >= rasmlar.length) active = 0;
-    image.src = rasmlar[active];
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
 
-    if (active < 0) active = linklar.length - 1;
-    if (active >= linklar.length) active = 0;
-    a.href = linklar[active]
-}
-leftBtn.onclick = () => changeSlide(-1);
-rightbBtn.onclick = () => changeSlide(1);
+    const slideWidth = images[0].offsetWidth; // Calculate the current slide width dynamically
+    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+};
 
+// Add event listeners for the buttons
+leftBtn.addEventListener('click', () => changeSlide(-1));
+rightBtn.addEventListener('click', () => changeSlide(1));
+
+// Automatically change slides every 5 seconds
+setInterval(() => changeSlide(1), 5000);
+
+// Optional: handle window resize to recalculate slide position
+window.addEventListener('resize', () => {
+    const slideWidth = images[0].offsetWidth; // Recalculate the slide width on window resize
+    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+});
 
 
 
@@ -38,23 +38,22 @@ rightbBtn.onclick = () => changeSlide(1);
 
 fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.json()).then((res)=>{
     console.log(res)
-})
 
 
-
-
-//Api uchun function:
-const s2_tovars = document.getElementById('s2tovs')
-
+    //Api uchun function:
+    const s2_tovars = document.getElementById('s2tovs')
+    let cr_table_divv = document.createElement('div') //cher
 
 
 function cr_element(){
-    for(i=0; i<21;i++){
+    for(i=0; i<12;i++){
+        
+    
         //create element
         let main_div = document.createElement('div')
         let tovar_img = document.createElement('img')
         let tovar_p = document.createElement('p')
-        let tovar_btn = document.createElement('tovar')
+        let tovar_btn = document.createElement('button')
 
         //class
         main_div.classList.add('tovar')
@@ -68,12 +67,127 @@ function cr_element(){
 
         //innerHTML
         
-        tovar_img.src = res.results.image_url
+        tovar_img.src = res.results[i].image_file
+        tovar_p.innerHTML = res.results[i].name
+        tovar_btn.innerHTML = 'BATAFSIL'
 
+        //id
 
-        i+1
+        tovar_btn.id = 'openModalBtn'+i
+
+        var modal = document.getElementById("productModal");
+        var openModalBtn0 = document.getElementById("openModalBtn0");
+        var openModalBtn1 = document.getElementById("openModalBtn1");
+        var openModalBtn2 = document.getElementById("openModalBtn2");
+        var openModalBtn3 = document.getElementById("openModalBtn3");
+        var openModalBtn4 = document.getElementById("openModalBtn4");
+        var openModalBtn5 = document.getElementById("openModalBtn5");
+        var openModalBtn6 = document.getElementById("openModalBtn6");
+        var openModalBtn7 = document.getElementById("openModalBtn7");
+        var openModalBtn8 = document.getElementById("openModalBtn8");
+        var openModalBtn9 = document.getElementById("openModalBtn9");
+        var openModalBtn10 = document.getElementById("openModalBtn10");
+        var openModalBtn11 = document.getElementById("openModalBtn11");
+        
+        var closeBtn = document.getElementsByClassName("closeBtn")[0];
+        
     }
-    
+    // Modal elementlarini olish
+
+    let modal_img = document.getElementById('modalimg')
+    let modal_h1 = document.getElementById('modalh1')
+    let modal_p1 = document.getElementById('modalp1')
+// Modalni ochish
+openModalBtn0.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[0].image_file
+    modal_h1.innerHTML = res.results[0].model_name
+    modal_p1.innerHTML = res.results[0].name
+}
+openModalBtn1.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[1].image_file
+    modal_h1.innerHTML = res.results[1].model_name
+    modal_p1.innerHTML = res.results[1].name
+}
+openModalBtn2.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[2].image_file
+    modal_h1.innerHTML = res.results[2].model_name
+    modal_p1.innerHTML = res.results[2].name
+}
+openModalBtn3.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[3].image_file
+    modal_h1.innerHTML = res.results[3].model_name
+    modal_p1.innerHTML = res.results[3].name
+}
+openModalBtn4.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[4].image_file
+    modal_h1.innerHTML = res.results[4].model_name
+    modal_p1.innerHTML = res.results[4].name
+}
+openModalBtn5.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[5].image_file
+    modal_h1.innerHTML = res.results[5].model_name
+    modal_p1.innerHTML = res.results[5].name
+}
+openModalBtn6.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[6].image_file
+    modal_h1.innerHTML = res.results[6].model_name
+    modal_p1.innerHTML = res.results[6].name
+}
+openModalBtn7.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[7].image_file
+    modal_h1.innerHTML = res.results[7].model_name
+    modal_p1.innerHTML = res.results[7].name
+}
+openModalBtn8.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[8].image_file
+    modal_h1.innerHTML = res.results[8].model_name
+    modal_p1.innerHTML = res.results[8].name
+}
+openModalBtn9.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[9].image_file
+    modal_h1.innerHTML = res.results[9].model_name
+    modal_p1.innerHTML = res.results[9].name
+}
+openModalBtn10.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[10].image_file
+    modal_h1.innerHTML = res.results[10].model_name
+    modal_p1.innerHTML = res.results[10].name
+}
+openModalBtn11.onclick = function() {
+    modal.style.display = "block";
+    modal_img.src = res.results[11].image_file
+    modal_h1.innerHTML = res.results[11].model_name
+    modal_p1.innerHTML = res.results[11].name
+}
+
+// Modalni yopish
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Modaldan tashqariga bosilganda yopish
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 }
+
+cr_element()
+
+
+
+})

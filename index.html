@@ -44,9 +44,9 @@
      <img src="./img/Group 100.png" alt="" class="logo" style="cursor: pointer;">
      <nav class="hnav">
       <a href="#s1">Bosh Sahifa</a>
-      <a href="#s2">Mahsulotlar</a>
-      <a href="#">Manzil</a>
-      <a href="#">Boglanish</a>
+      <a href="./mahsulot.html">Mahsulotlar</a>
+      <a href="./location.html">Manzil</a>
+      <a href="./location.html">Boglanish</a>
      </nav>
      <div class="hicon">
       <img src="https://static-00.iconduck.com/assets.00/search-icon-256x256-n1wf4dtw.png" alt="" class="icon1">
@@ -59,13 +59,16 @@
   <main>
     <!-- slide section  -->
     <section class="swipe" id="s1">
-      <div class="container">
-        <div class="row justify-content-center mt-3 ">
-            <div class="col-lg-12 d-flex  justify-content-center  align-items-center ">
-                <button class="buttonn" id="left"><img src="./img/keyboard_arrow_right (1).png" alt="" class="rasm"></button>
-                <a href="https://www.instagram.com/serverstore_uz?igsh=aDk2ZW82bXI2MTJy" id="swipea" target="_blank"><img src="./img/Banner 1-01.jpg" alt=""  class=" rounded-xl " id="img1"></a>
-                <button class="buttonn" id="right"><img src="./img/keyboard_arrow_right.png" alt="" class="rasm"></button>
-            </div>
+      <div class="slider">
+        <div class="slides" id="slides">
+            <a href="#"><img src="./img/Banner 1-01.jpg" alt="Image 1" class="slide active" style="cursor: pointer;" id="slide_img"></a>
+            <img src="./img/Banner 2-01.jpg" alt="Image 2" class="slide" id="slide" style="cursor: pointer;">
+            <img src="./img/Banner 3-01.jpg" alt="Image 3" class="slide" id="slide" style="cursor: pointer;">
+            <img src="./img/Server-01.jpg" alt="Image 4" class="slide" id="slide" style="cursor: pointer;">
+        </div>
+        <div class="navigation">
+            <button class="nav-btn" id="left">&#10094;</button>
+            <button class="nav-btn" id="right">&#10095;</button>
         </div>
     </div>
     </section>
@@ -73,66 +76,33 @@
     <section class="s2" id="s2">
       <h1>BIZNING MAHSULOTLAR</h1>  
       <div class="s2tovs" id="s2tovs">
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
+        <!-- Modalni ochish uchun tugma -->
+        
+
+    <!-- Modal tuzilishi -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn"><img src="https://static.vecteezy.com/system/resources/thumbnails/019/858/315/small_2x/back-flat-color-outline-icon-free-png.png" alt="" class="ti3"></span>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="Mahsulot rasmi"  class="ti" id="modalimg">
+                <div class="modal-info">
+                    <h1 class="modalh1" id="modalh1">INTEL</h1>
+                    <p class="p10" id="modalp1">Intel Converged Network X710-T4 10G 4-port PCIe</p>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="assa">
+                    <p class="p11">Mahsulotlarni Telegram orqali xarid qiling</p>
+                    <a href="https://t.me/serverstore_uz" class="ti2"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="32" height="32"></a>  
+                </div>
+                
+                <a href="https://t.me/serverstore_uz" target="_blank" class="tba"><button class="tb">Sotib olish</button></a>
+            </div>
         </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
-        <div class="tovar">
-          <img src="https://assets.ext.hpe.com/is/image/hpedam/s00010511?$zoom$" alt="" class="timg">
-          <p class="tp">HPE ML30 G10+ 4LFF / E-2314 / 16GB / 350W</p>
-          <button id="btn1" class="btn1">SOTIB OLISH</button>
-        </div>
+    </div>
         
         
       </div>
@@ -140,31 +110,45 @@
    
   </main>
   
+  <footer>
+    <div class="foot">
+      <div class="navaa">
+        <img src="./img/Group 100.png " alt="" class="logo">
+        <nav class="hnav">
+          <a href="#s1">Bosh Sahifa</a>
+          <a href="#s2">Mahsulotlar</a>
+          <a href="#">Manzil</a>
+          <a href="#">Boglanish</a>
+        </nav>
+      </div>
+      
+      <div class="socset">
+        <img src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png" alt="" class="soc2">
+        <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt=" " class="soc2">
+        <img src="https://icons.iconarchive.com/icons/iconsmind/outline/512/Youtube-icon.png" alt=" " class="soc3">  
+        <img src="https://cdn.vectorstock.com/i/preview-1x/23/07/telegram-logo-messenger-icon-realistic-social-vector-46312307.webp" alt=" " class="soc2">  
+      </div>
+    </div>
+      
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>
-<footer>
-  <div class="foot">
-    <div class="navaa">
-      <img src="./img/Group 100.png " alt="" class="logo">
-      <nav class="hnav">
-        <a href="#s1">Bosh Sahifa</a>
-        <a href="#s2">Mahsulotlar</a>
-        <a href="#">Manzil</a>
-        <a href="#">Boglanish</a>
-      </nav>
-    </div>
-    
-    <div class="socset">
-      <img src="https://icons.iconarchive.com/icons/fa-team/fontawesome-brands/256/FontAwesome-Brands-Square-Instagram-icon.png" alt="" class="soc2">
-      <img src="https://cdn-icons-png.freepik.com/512/59/59157.png" alt=" " class="soc">
-      <img src="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png" alt=" " class="soc3">  
-      <img src="https://www.svgrepo.com/show/487137/brand-telegram-sq.svg" alt=" " class="soc2">  
-    </div>
-  </div>
-  
-</footer>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

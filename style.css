@@ -11,6 +11,7 @@ header{
     top: -1px;
     margin-bottom: 80px;
     position: fixed;
+    z-index: 1;
 }
 body{  
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -38,6 +39,7 @@ body{
     width: 45px;
     
 }
+
 .swipe{
     padding: 100px 50px 50px;
     
@@ -65,6 +67,11 @@ body{
 }
 .hnav a:hover{
     color: rgb(2, 188, 187);
+    transition: 0.7s;
+}
+.hnav a:active{
+    color: rgb(0, 125, 125);
+    transition: none;
 }
 .s2{
     /* margin-top:; */
@@ -103,13 +110,17 @@ h1{
     margin-bottom: 30px;
 }
 .timg{
-    height: 180px;
+    height: 172px;
     width: 220px;
+    border: 0;
+    border-radius:15px ;
 }
 .tp{
-    font-size: 19px;
+    font-size: 15px;
     font-family: Inder;
     margin: 0 6px;
+    width: 208px;
+    
 }
 .btn1{
     width: 148px;
@@ -119,11 +130,55 @@ h1{
     border: 0;
     margin-bottom: 10px;
     font-family: Inder;
-    font-size:15px;
+    font-size:13x;
     font-weight: 600;
     cursor: pointer;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+}
+#s1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider {
+    width: 1110px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
 }
 
+.slides {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 1110px;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
+    user-select: none;
+}
 .buttonn{
     background-color: transparent;
     border: 0;
@@ -147,21 +202,27 @@ h1{
     border: 0;
     border-radius: 5px;
     height: 30px;
+    cursor: pointer;
 }
 .soc2{
-    height: 35px;
-    border-radius: 10px;
+    height: 30px;
+    width: 30px;
     border:0 ;
+    cursor: pointer;
 }
 .socset{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
+    cursor: pointer;
     
 }
+
 .soc3{
-    height: 55px;
+    height: 45px;
+    
+    cursor: pointer;
 }
 .navaa{
     display: flex;
@@ -172,6 +233,7 @@ h1{
 #swipea{
     height: 500px;
     margin: 0px 20px;
+    width: 100px;
 }
 #img1{
     height:100%;
@@ -188,3 +250,694 @@ h1{
 .rasm{
     width: 50px;
 }
+
+.cr_table_div{
+    display: none;
+}
+
+
+.cr_table_divv{
+    display: none;
+}
+
+.cr_table_btn1{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+}
+.cr_table_btn1_img{
+    width: 30px;
+    height: 30px;
+}
+.cr_table_div3{
+    display: flex;
+
+}
+.cr_table_img{
+    width: 400px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.cr_table_div4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+.cr_table_h2{
+    font-family: Inder;
+    font-size: 40px;
+    font-weight: 400;
+}
+.cr_table_p1{
+    font-family: Inder;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.cr_table_div5{
+    display: flex;
+    align-items: center;
+    
+}
+.cr_table_p3{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    margin-right: 5px;
+}
+.cr_table_img2{
+    width: 20px;
+    height: 20px;
+    margin-right: 60px;
+}
+.cr_table_btn2{
+    cursor: pointer;
+    width: 180px;
+    height:35px;
+    border-radius: 70px 10px 70px 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: Inter;
+    background: rgb(20, 173, 171);
+}
+.cr_table_div_act{
+    display: flex;
+    background-color: #008084;
+    flex-direction: column;
+    width: 700px;
+    height: 500px;
+    padding: 10px 10px 60px 10px;
+    justify-content: space-between;
+    border-radius: 20px;
+    position: fixed;
+    
+}
+
+.cr_table_divv_act{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.558);
+    position: fixed ;
+    
+}   
+
+
+.modal {
+    display: none; /* Sukut bo'yicha yashirilgan */
+    position: fixed; /* Ekranda qimirlamasdan turadi */
+    z-index: 1; /* Yuqori qatlamda joylashgan */
+    left: 0;
+    top: 0;
+    width: 100%; /* To‘liq kenglik */
+    height: 100%; /* To‘liq balandlik */
+    overflow: auto; /* Kerak bo'lsa skrollni ko'rsatish */
+    background-color: rgba(0,0,0,0.4); /* Yarim qorong'i fon */
+    
+}
+.p10{
+    font-family: Inder;
+    font-weight: 400;
+    font-size: 25px;
+}
+/* Modal kontenti */
+.modal-content {
+    background-color: #008084;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 500px;
+    padding: 10px 10px 15px 10px;
+    justify-content: space-between;
+    border-radius: 20px;
+    position: fixed;
+    position: relative;
+    border: 0;
+
+    
+    margin: 10% auto;
+    
+    
+   
+   
+    
+    
+   
+}
+.ti3{
+    width: 30px;
+    height: 30px;
+}
+.ti{
+    width: 400px;
+    margin-right: 20px;
+    border-radius: 20px;
+    height: 312px;
+}
+/* Modal bosh qismi */
+.modal-header {
+    padding: 10px;
+    text-align: left;
+    /* color: white; */
+   border: 0;
+}
+
+.ti2{
+    width: 25px;
+    height: 25px;
+   
+}
+
+.modalh1{
+    font-family: Inder;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+/* Modalni yopish tugmasi */
+.closeBtn {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Modal tanasi */
+.modal-body {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    
+}
+
+/* Mahsulot rasmi */
+
+
+/* Modal ma'lumotlar */
+.modal-info {
+    padding-left: 20px;
+    color: white;
+    height: 312px;
+    display: flex;
+    align-items: start;
+    
+    flex-direction: column;
+}
+
+
+
+/* Narx */
+
+
+/* Modal tag qismi */
+.modal-footer {
+    background-color: #008084;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    border: none;
+}
+
+/* Telegram link */
+.telegram-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Sotib olish tugmasi */
+.tb{
+    cursor: pointer;
+    width: 180px;
+    height:35px;
+    border-radius: 70px 10px 70px 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 600;
+    background: rgb(20, 173, 171);
+    margin-right: 20px  ;
+}
+.assa{
+    display: flex;
+    
+    justify-content: center;
+    gap: 5px;
+    
+
+}
+
+.p11{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    margin-right: 5px;
+}
+.tba{
+    text-decoration: none;
+}
+
+.cart{
+    width: 800px;
+    height: 503px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 30px;
+}
+.location_map{
+    width: 800px;
+    height: 503px;
+    border: none;
+    border-radius: 30px;
+}
+.l_sc_1{
+    padding:50px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    height: 100vh;
+}
+
+.location_icon{
+    height: 42px;
+}
+.location_ic{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.location_text{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.location_h2{
+    color: white;
+    font-size: 40px;
+    font-family: Inter;
+}
+.location_h3{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: Inder;
+}
+#location_h3{
+    font-size: 24px;
+}
+.aa{
+    text-decoration: none;
+}
+#mahsulot_btn{
+    background-color: white;
+    border: #002627 solid 3px;
+    font-size: 20px;
+    font-family: Inder;
+    color:#002627;
+    text-align: center;
+    border-radius:10px ;
+    cursor: pointer;
+    height: 44px;
+    margin-bottom: 30px;
+}
+#mahsulot_btn:hover{
+    color: white;
+    transition: 0.6s ;
+    background-color:#002627;
+    
+}
+#mahsulot_btn:active{
+    color: rgb(151, 151, 151);
+    transition: none;
+    background-color:#001819;
+    
+}
+.location_h3:hover{
+    transition: 0.6s ;
+    transform: scale(1.1);
+    
+}
+.location_icon:hover{
+    transition: 0.6s ;
+    transform: scale(0.8);
+    
+}
+.icon2:hover{
+    transition: 0.6s ;
+    transform: scale(0.8);
+    
+}
+.logo:hover{
+    position: relative; 
+    animation: move-right-left 2s forwards;
+    
+}
+@keyframes move-right-left {
+    0% {
+      transform: translateX(0);
+     
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+      
+    }
+  }
+.p_d{
+    padding: 0 50px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.mahsulot_btn1{
+    width: 125px;
+
+}
+.mahsulot_btn2{
+    width: 110px;
+}
+.mahsulot_btn3{
+    width: 85px;
+
+}
+.mahsulot_btn4{
+    width: 210px;
+
+}
+.mahsulot_btn5{
+    width: 137px;
+    
+}
+.mahsulot_btn6{
+    width: 85px;
+    
+}
+.mahsulot_btn7{
+    width: 85px;
+    
+}
+.mahsulot_btn8{
+    width: 85px;
+    
+}
+.mahsulot_btn9{
+    width: 145px;
+
+}
+.s2_as{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive desktop */
+@media (min-width: 1750px){
+
+    .slider {
+        width: 1400px;
+        height: 610px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .slides {
+        display: flex;
+        width: 400%;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+        width: 1400px;
+        height: 610px;
+        flex-shrink: 0;
+    }
+    
+    .navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    
+    .nav-btn {
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 35px;
+        color: white;
+        user-select: none;
+    }
+
+
+
+
+    .tovar{
+        width: 250px;
+        height:378px;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3px 0px ;
+        margin-bottom: 30px;
+    }
+    .s2tovs{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        /* gap: 23px; */
+        margin-bottom: 130px;
+    }
+    h1{
+        font-family: Inder;
+        font-size: 44px;
+        color: white;
+        font-weight: 450;
+        margin-bottom: 30px;
+    }
+    .timg{
+        height: 185px;
+        width: 250px;
+        border: 0;
+        border-radius:15px ;
+    }
+    .tp{
+        font-size: 23px;
+        font-family: Inder;
+        margin: 0 6px;
+        width: 233px;
+        
+    }
+    .btn1{
+        width: 158px;
+        height: 35px;
+        background-color: #14ADAB;
+        border-radius: 45px 15.5px 45px 15.5px;
+        border: 0;
+        margin-bottom: 10px;
+        font-family: Inder;
+        font-size:16px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .modal-content {
+        background-color: #008084;
+        display: flex;
+        flex-direction: column;
+        width: 1100px;
+        height:780px;
+        padding: 10px 10px 15px 10px;
+        justify-content: space-between;
+        border-radius: 20px;
+        position: fixed;
+        position: relative;
+        border: 0;
+    
+        
+        margin: 10% auto;
+        
+        
+       
+       
+        
+        
+       
+    }
+    .ti3{
+        width: 30px;
+        height: 30px;
+    }
+    .ti{
+        width: 572px;
+        margin-right: 20px;
+        border-radius: 20px;
+        height: 423px;
+    }
+
+    .modal-header {
+        padding: 10px;
+        text-align: left;
+        
+        border: 0;
+    }
+    
+    
+    
+    .modalh1{
+        font-family: Inder;
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    /* Modalni yopish tugmasi */
+    .closeBtn {
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+        float: left;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+    /* Modal tanasi */
+    .modal-body {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        
+    }
+    
+    /* Mahsulot rasmi */
+    
+    
+    /* Modal ma'lumotlar */
+    .modal-info {
+        padding-left: 20px;
+        color: white;
+        height: 423px;
+        display: flex;
+        align-items: start;
+        
+        flex-direction: column;
+    }
+    
+    
+    
+    /* Narx */
+    
+    
+    /* Modal tag qismi */
+    .modal-footer {
+        background-color: #008084;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0 0 10px 10px;
+        color: white;
+        border: none;
+    }
+    
+    /* Telegram link */
+    .telegram-link {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    .p10{
+        font-family: Inder;
+        font-weight: 400;
+        font-size: 35px;
+    }
+    /* Sotib olish tugmasi */
+    .tb{
+        cursor: pointer;
+        width: 230px;
+        height:50px;
+        border-radius: 70px 10px 70px 10px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 600;
+        background: rgb(20, 173, 171);
+        margin-right: 20px  ;
+    }
+    .assa{
+        display: flex;
+        
+        justify-content: center;
+        gap: 5px;
+        
+    
+    }
+    
+    .p11{
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 26px;
+        color: white;
+        margin-right: 5px;
+    }
+}
+
+
+
