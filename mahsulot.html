@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inder&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel ="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inder&family=Jomhuria&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">    
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,20 +17,28 @@
 </head>
 <body>
     <!-- header  -->
-  <header class="header">
-    <div class="head">
-     <img src="./img/Group 100.png" alt="" class="logo" style="cursor: pointer;">
-     <nav class="hnav">
-      <a href="./index.html">Bosh Sahifa</a>
-      <a href="./mahsulot.html">Mahsulotlar</a>
-      <a href="./location.html">Manzil</a>
-      <a href="./location.html">Boglanish</a>
-     </nav>
-     <div class="hicon">
-      <img src="https://static-00.iconduck.com/assets.00/search-icon-256x256-n1wf4dtw.png" alt="" class="icon1">
-      <a href="./rus.html "><img src="https://vectorflags.s3.amazonaws.com/flags/ru-circle-01.png" alt="" class="icon2"></a>
-     </div>
-    </div>
+    <header class="header">
+      <div class="head">
+          <!-- Logo -->
+          <img src="./img/Group 100.png" alt="" class="logo" style="cursor: pointer;">
+  
+          <!-- Menu Button for Mobile -->
+          <div class="menu-icon" id="menu-icon">
+              <img src="https://cdn-icons-png.flaticon.com/512/55/55003.png" alt="menu icon" class="menu-icon-img">
+          </div>
+  
+          <!-- Navigation Bar -->
+          <nav class="hnav" id="nav-menu">
+              <a href="./index.html">Bosh Sahifa</a>
+              <a href="./mahsulot.html">Mahsulotlar</a>
+              <a href="./location.html">Manzil</a>
+              <a href="./location.html">Bog'lanish</a>
+              <!-- Flag icon inside nav at the bottom -->
+              <a href="./rus.html" class="flag-link">
+                  <img src="https://vectorflags.s3.amazonaws.com/flags/ru-circle-01.png" alt="" class="icon2">
+              </a>
+          </nav>
+      </div>
   </header>
   <!-- /header -->  
   <main>
@@ -63,7 +71,7 @@
                   <div class="modal-footer">
                       <div class="assa">
                           <p class="p11">Mahsulotlarni Telegram orqali xarid qiling</p>
-                          <a href="https://t.me/serverstore_uz" class="ti2"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="32" height="32"></a>  
+                          <a href="https://t.me/serverstore_uz" class="ti2"  id="log"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="tii2" ></a>  
                       </div>
                       
                       <a href="https://t.me/serverstore_uz" target="_blank" class="tba"><button class="tb">Sotib olish</button></a>

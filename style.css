@@ -73,6 +73,26 @@ body{
     color: rgb(0, 125, 125);
     transition: none;
 }
+.hnav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.hnav2 a{
+    font-size: 19px;
+    text-decoration: none;
+    color: black;
+    font-family: Inder;
+}
+.hnav2 a:hover{
+    color: rgb(2, 188, 187);
+    transition: 0.7s;
+}
+.hnav2 a:active{
+    color: rgb(0, 125, 125);
+    transition: none;
+}
 .s2{
     /* margin-top:; */
     display: flex;
@@ -93,6 +113,135 @@ body{
     padding: 3px 0px ;
     margin-bottom: 30px;
 }
+
+/* Main header styling */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    top: -1px;
+    margin-bottom: 80px;
+    position: fixed;
+    z-index: 1;
+}
+
+/* Styling for the head content */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    height: 45px;
+}
+
+/* Menu icon for mobile */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon-img {
+    width: 30px;
+}
+
+/* Navigation Bar */
+.hnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hnav a {
+    font-size: 19px;
+    text-decoration: none;
+    color: black;
+    font-family: Inder;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Add hover effect with underline animation */
+.hnav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: rgb(2, 188, 187);
+    transition: width 0.3s ease-in-out;
+}
+
+.hnav a:hover::after {
+    width: 100%;
+}
+
+.hnav a:hover {
+    color: rgb(2, 188, 187);
+}
+
+.hnav a:active {
+    color: rgb(0, 125, 125);
+    transition: none;
+}
+
+/* Icons Styling */
+.hicon {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon2 {
+    width: 45px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+    .hnav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+
+    .hicon {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .flag-link {
+        margin-top: 5px;
+    }
+    .icon2{
+        margin-bottom: 10px;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-active .hnav {
+        display: flex;
+    }
+    .menu-icon-img{
+        height: 20px;
+        width: 25px;
+    }
+}
+
+
 .s2tovs{
     display: flex;
     flex-wrap: wrap;
@@ -205,8 +354,8 @@ h1{
     cursor: pointer;
 }
 .soc2{
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border:0 ;
     cursor: pointer;
 }
@@ -214,7 +363,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     cursor: pointer;
     
 }
@@ -409,11 +558,14 @@ h1{
 }
 
 .ti2{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
    
 }
-
+.tii2{
+    width: 30px;
+    height: 30px;
+}
 .modalh1{
     font-family: Inder;
     font-size: 40px;
@@ -496,7 +648,7 @@ h1{
 }
 .assa{
     display: flex;
-    
+    align-items: center;
     justify-content: center;
     gap: 5px;
     
@@ -675,8 +827,8 @@ h1{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    
-    gap: 20px;
+    justify-content: space-between;
+    gap: 19px;
 }
 
 
@@ -694,7 +846,7 @@ h1{
 
 /* responsive desktop */
 @media (min-width: 1750px){
-
+    
     .slider {
         width: 1400px;
         height: 610px;
@@ -940,4 +1092,494 @@ h1{
 }
 
 
+/* responsive phone */
+@media (max-width: 480px){
+    .head{
+        padding: 10px;
+    }
+    .swipe{
+        padding: 100px 10px;
+    }
+    
+    .slider {
+        width: 410px;
+        height: 178px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .slides {
+        display: flex;
+        width: 400%;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+        width: 410px;
+        height: 178px;
+        flex-shrink: 0;
+    }
+    
+    .navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    
+    .nav-btn {
+        background-color: transparent;
+        border: none;
+        padding: 2px;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        user-select: none;
+    }
 
+
+
+
+    .tovar{
+        width: 185px;
+        height:280px;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3px 0px ;
+        margin-bottom: 30px;
+    }
+    .s2{
+        padding: 10px;
+        text-align: center;
+    }
+    .s2 h1{
+        font-size: 20px;
+    }
+    .s2tovs{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        
+        /* gap: 23px; */
+        margin-bottom: 130px;
+    }
+    .s2 h1{
+        font-family: Inder;
+        font-size: 20px;
+        color: white;
+        font-weight: 450;
+        margin-bottom: 30px;
+    }
+    .timg{
+        height: 137px;
+        width: 185px;
+        border: 0;
+        border-radius:15px ;
+    }
+    .tp{
+        font-size: 15px;
+        font-family: Inder;
+        margin: 0 6px;
+        width: 160px;
+        text-align: start;
+    }
+    .btn1{
+        width: 103px;
+        height: 22px;
+        background-color: #14ADAB;
+        border-radius: 45px 15.5px 45px 15.5px;
+        border: 0;
+        margin-bottom: 10px;
+        font-family: Inder;
+        font-size:10px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .modal-content {
+        background-color: #008084;
+        display: flex;
+        flex-direction: column;
+        width: 1100px;
+        height:780px;
+        padding: 10px 10px 15px 10px;
+        justify-content: space-between;
+        border-radius: 20px;
+        position: fixed;
+        position: relative;
+        border: 0;
+    
+        
+        margin: 10% auto;
+        
+        
+       
+       
+        
+        
+       
+    }
+    .ti3{
+        width: 30px;
+        height: 30px;
+    }
+    .ti{
+        width: 572px;
+        margin-right: 20px;
+        border-radius: 20px;
+        height: 423px;
+    }
+
+    .modal-header {
+        padding: 10px;
+        text-align: left;
+        
+        border: 0;
+    }
+    
+    
+    
+    .modalh1{
+        font-family: Inder;
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    /* Modalni yopish tugmasi */
+    .closeBtn {
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+        float: left;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+    /* Modal tanasi */
+    .modal-body {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        
+    }
+    
+    /* Mahsulot rasmi */
+    
+    
+    /* Modal ma'lumotlar */
+    .modal-info {
+        padding-left: 20px;
+        color: white;
+        height: 423px;
+        display: flex;
+        align-items: start;
+        
+        flex-direction: column;
+    }
+    
+    
+    
+    /* Narx */
+    
+    
+    /* Modal tag qismi */
+    .modal-footer {
+        background-color: #008084;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0 0 10px 10px;
+        color: white;
+        border: none;
+    }
+    
+    /* Telegram link */
+    .telegram-link {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    .p10{
+        font-family: Inder;
+        font-weight: 400;
+        font-size: 35px;
+    }
+    /* Sotib olish tugmasi */
+    .tb{
+        cursor: pointer;
+        width: 230px;
+        height:50px;
+        border-radius: 70px 10px 70px 10px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 600;
+        background: rgb(20, 173, 171);
+        margin-right: 20px  ;
+    }
+    .assa{
+        display: flex;
+        
+        justify-content: center;
+        gap: 5px;
+        
+    
+    }
+    
+    .p11{
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 26px;
+        color: white;
+        margin-right: 5px;
+    }
+    .navaa{
+        flex-direction: column;
+        align-items: start;
+    }
+    .hnav2{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 15px;
+        margin-top:10px ;
+    }
+    .hnav2 a{
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+        font-family: Inder;
+        
+    }
+    
+    .foot{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+    .socset{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .soc2{
+        width: 25px;
+        height: 25px;
+    }
+    .p_d{
+        padding:10px ;
+    }
+    .s2_as{
+        padding: 10px;
+    }
+    
+
+    .modal {
+        display: none; /* Sukut bo'yicha yashirilgan */
+        position: fixed; /* Ekranda qimirlamasdan turadi */
+        z-index: 1; /* Yuqori qatlamda joylashgan */
+        left: 0;
+        top: 0;
+        width: 100%; /* To‘liq kenglik */
+        height: 100%; /* To‘liq balandlik */
+        overflow: auto; /* Kerak bo'lsa skrollni ko'rsatish */
+        background-color: rgba(0,0,0,0.4); /* Yarim qorong'i fon */
+        
+    }
+    .p10{
+        font-family: Inder;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    /* Modal kontenti */
+    .modal-content {
+        background-color: #008084;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 490px;
+        padding: 10px;
+        justify-content: space-between;
+        border-radius: 20px;
+        position: fixed;
+        position: relative;
+        border: 0;
+    
+        
+        margin: 10% auto;
+        
+        
+       
+       
+        
+        
+       
+    }
+    .ti3{
+        width: 20px;
+        height: 20px;
+    }
+    .ti{
+        width: 361px;
+       
+        border-radius: 20px;
+        height: 205px;
+    }
+
+    
+    .modal-header {
+        
+        text-align: left;
+        
+       border: 0;
+    }
+    
+    .ti2{
+        width: 20px;
+        height: 20px;
+        padding: 0px;
+        font-size: 10px;
+    }
+    .tii2{
+        height: 20px;
+        width: 20px;
+        
+    }
+    #modalh1{
+        font-family: Inder;
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    /* Modalni yopish tugmasi */
+    .closeBtn {
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        float: left;
+        cursor: pointer;
+        
+    }
+    
+    /* Modal tanasi */
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        width: 100%;
+        
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    
+    /* Mahsulot rasmi */
+    
+    
+    /* Modal ma'lumotlar */
+    .modal-info {
+        
+        color: white;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .assa h1{
+        font-size: 36px;
+    }
+    #modalh1{
+        margin: 0px;
+        margin-bottom: 6px;
+    }
+    
+    /* Narx */
+    #modalimg{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    
+    /* Modal tag qismi */
+    .modal-footer {
+        background-color: #008084;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        border-radius: 0 0 10px 10px;
+        color: white;
+        border: none;
+        margin-top: 0px;
+    }
+    
+    /* Telegram link */
+    .telegram-link {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Sotib olish tugmasi */
+    .tb{
+        cursor: pointer;
+        width: 117px;
+        height:26px;
+        border-radius: 70px 10px 70px 10px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 600;
+        background: rgb(20, 173, 171);
+        margin: 0px;
+    }
+    .assa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        
+    
+    }
+    .tba{
+        margin: 0px;
+        margin-top: 6px;
+    }
+    .p11{
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 12px;
+        color: white;
+        margin-right: 5px;
+        height: auto;
+    }
+    .tba{
+        text-decoration: none;
+    }
+   
+}
