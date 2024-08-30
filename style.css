@@ -213,7 +213,7 @@ header {
         width: 100%;
         background-color: white;
     }
-
+    
     .hicon {
         display: none;
         position: absolute;
@@ -248,7 +248,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 19px;
+    gap: 10px;
     margin-bottom: 130px;
 }
 h1{
@@ -520,8 +520,8 @@ h1{
     background-color: #008084;
     display: flex;
     flex-direction: column;
-    width: 700px;
-    height: 500px;
+    width: 1000px;
+    height: 709px;
     padding: 10px 10px 15px 10px;
     justify-content: space-between;
     border-radius: 20px;
@@ -530,7 +530,7 @@ h1{
     border: 0;
 
     
-    margin: 10% auto;
+    margin: 0.9% auto;
     
     
    
@@ -544,10 +544,10 @@ h1{
     height: 30px;
 }
 .ti{
-    width: 400px;
+    width: 520px;
     margin-right: 20px;
     border-radius: 20px;
-    height: 312px;
+    height: 397px;
 }
 /* Modal bosh qismi */
 .modal-header {
@@ -560,11 +560,17 @@ h1{
 .ti2{
     width: 30px;
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
 }
 .tii2{
     width: 30px;
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .modalh1{
     font-family: Inder;
@@ -597,7 +603,7 @@ h1{
 .modal-info {
     padding-left: 20px;
     color: white;
-    height: 312px;
+    height: 397px;
     display: flex;
     align-items: start;
     
@@ -650,7 +656,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     
 
 }
@@ -661,6 +667,8 @@ h1{
     font-size: 16px;
     color: white;
     margin-right: 5px;
+    height: 18px;
+    margin: 0 0 0 0 ;  
 }
 .tba{
     text-decoration: none;
@@ -828,7 +836,7 @@ h1{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 19px;
+    gap: 10px;
 }
 
 
@@ -845,7 +853,7 @@ h1{
 
 
 /* responsive desktop */
-@media (min-width: 1750px){
+@media (min-width: 1700px){
     
     .slider {
         width: 1400px;
@@ -1096,6 +1104,7 @@ h1{
 @media (max-width: 480px){
     .head{
         padding: 10px;
+        width: 100%;
     }
     .swipe{
         padding: 100px 10px;
@@ -1450,8 +1459,8 @@ h1{
     .modal-header {
         
         text-align: left;
-        
-       border: 0;
+
+        border: 0;
     }
     
     .ti2{
@@ -1584,5 +1593,30 @@ h1{
     .tba{
         text-decoration: none;
     }
-   
+    
+    .l_sc_1{
+        width: 100%;
+        
+        flex-direction: column;
+        padding: 100px 10px 100px 10px;
+        gap: 30px;
+        margin: 0;
+        align-items: start;
+    }
+    .location_map{
+        width: 350px;
+        height: 188px;
+        border-radius: 20px;
+        margin: 0;
+    }
+    .cart{
+        width: 350px;
+        height: 188px;
+        border: none;
+        border-radius: 20px;
+        margin: 0;
+    }
+    .location_text{
+        margin: 0;
+    }
 }
