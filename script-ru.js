@@ -10,8 +10,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
     let page_btn8 = document.querySelector('.mahsulot_btn8')
     let page_btn9 = document.querySelector('.mahsulot_btn9')
 
-        const menuIcon = document.getElementById('menu-icon');
-    const header = document.querySelector('header');
+    
 
     
 
@@ -83,6 +82,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
                 tovar_btn.addEventListener('click' ,()=>{
                     console.log(tovar_btn.id);
                     for (i=0;i<201;i++){
@@ -94,6 +94,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     

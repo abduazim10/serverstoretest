@@ -55,7 +55,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
 
     //Api uchun function:
     const s2_tovars = document.getElementById('s2tovs')
-    let cr_table_divv = document.createElement('div') //cher
+    
 
 
 function cr_element(){
@@ -111,78 +111,102 @@ function cr_element(){
     let modal_img = document.getElementById('modalimg')
     let modal_h1 = document.getElementById('modalh1')
     let modal_p1 = document.getElementById('modalp1')
+    let modal_p2 = document.getElementById('modalp2')
 // Modalni ochish
 openModalBtn0.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[0].image_file
     modal_h1.innerHTML = res.results[0].model_name
     modal_p1.innerHTML = res.results[0].name
+    modal_p2.innerHTML = res.results[0].price -'.00' + ' Som'
 }
 openModalBtn1.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[1].image_file
     modal_h1.innerHTML = res.results[1].model_name
     modal_p1.innerHTML = res.results[1].name
+    modal_p2.innerHTML = res.results[1].price -'.00' + ' Som'
+
 }
 openModalBtn2.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[2].image_file
     modal_h1.innerHTML = res.results[2].model_name
     modal_p1.innerHTML = res.results[2].name
+    modal_p2.innerHTML = res.results[2].price -'.00' + ' Som' 
+
 }
 openModalBtn3.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[3].image_file
     modal_h1.innerHTML = res.results[3].model_name
     modal_p1.innerHTML = res.results[3].name
+    modal_p2.innerHTML = res.results[3].price -'.00' + ' Som'
+
 }
 openModalBtn4.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[4].image_file
     modal_h1.innerHTML = res.results[4].model_name
     modal_p1.innerHTML = res.results[4].name
+    modal_p2.innerHTML = res.results[4].price -'.00' + ' Som'
+
 }
 openModalBtn5.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[5].image_file
     modal_h1.innerHTML = res.results[5].model_name
     modal_p1.innerHTML = res.results[5].name
+    modal_p2.innerHTML = res.results[5].price -'.00' + ' Som'
+
 }
 openModalBtn6.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[6].image_file
     modal_h1.innerHTML = res.results[6].model_name
     modal_p1.innerHTML = res.results[6].name
+    modal_p2.innerHTML = res.results[6].price  -'.00' + ' Som'
+
 }
 openModalBtn7.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[7].image_file
     modal_h1.innerHTML = res.results[7].model_name
     modal_p1.innerHTML = res.results[7].name
+    modal_p2.innerHTML = res.results[7].price -'.00' + ' Som'
+
 }
 openModalBtn8.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[8].image_file
     modal_h1.innerHTML = res.results[8].model_name
     modal_p1.innerHTML = res.results[8].name
+    modal_p2.innerHTML = res.results[8].price -'.00' + ' Som'
+
 }
 openModalBtn9.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[9].image_file
     modal_h1.innerHTML = res.results[9].model_name
     modal_p1.innerHTML = res.results[9].name
+    modal_p2.innerHTML = res.results[9].price -'.00' + ' Som'
+
 }
 openModalBtn10.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[10].image_file
     modal_h1.innerHTML = res.results[10].model_name
     modal_p1.innerHTML = res.results[10].name
+    modal_p2.innerHTML = res.results[10].price -'.00' + ' Som'
+
 }
 openModalBtn11.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[11].image_file
     modal_h1.innerHTML = res.results[11].model_name
     modal_p1.innerHTML = res.results[11].name
+    modal_p2.innerHTML = res.results[11].price -'.00' + ' Som'
+
 }
 
 // Modalni yopish
