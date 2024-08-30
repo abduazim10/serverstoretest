@@ -87,10 +87,10 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_p1 = document.getElementById('modalp1')
                 let modal_p2 = document.getElementById('modalp2')
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+                    
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                       
                         
 
                             modal.style.display = "block";
@@ -191,15 +191,21 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
+
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+               
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                    
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
@@ -293,15 +299,21 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
+
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+                 
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                     
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
@@ -392,15 +404,21 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
+
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+                
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                         
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
@@ -496,15 +514,21 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
+
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+                  
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                          
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
@@ -599,15 +623,21 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
+
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+              
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                      
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
@@ -701,15 +731,21 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
+
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+                
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                       
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
@@ -804,15 +840,21 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
+
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+                
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                  
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
@@ -904,15 +946,20 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
+                let modal_p2 = document.getElementById('modalp2')
                 tovar_btn.addEventListener('click' ,()=>{
-                    console.log(tovar_btn.id);
+                
                     for (i=0;i<201;i++){
                         if(tovar_btn.id == i){
-                            console.log(i);
+                        
+                        
+
                             modal.style.display = "block";
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
+                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+
                         }
                     }
                     
