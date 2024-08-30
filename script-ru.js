@@ -45,7 +45,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+         
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -53,7 +53,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
 
                 
 
-                //class
+
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -62,14 +62,17 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
 
                 
-                //append
+ 
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+      
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
                    
@@ -100,12 +103,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                     }
                     
                 });
-                // Modalni yopish
+        
                 closeBtn.onclick = function() {
                     modal.style.display = "none";
                 }
 
-                // Modaldan tashqariga bosilganda yopish
+               
                 window.onclick = function(event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
@@ -147,7 +150,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+      
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -156,7 +159,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+             
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -165,14 +168,17 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         
 
                 
-                //append
+        
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+        
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
                    
@@ -198,12 +204,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                     }
                     
                 });
-                // Modalni yopish
+             
                 closeBtn.onclick = function() {
                     modal.style.display = "none";
                 }
 
-                // Modaldan tashqariga bosilganda yopish
+               
                 window.onclick = function(event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
@@ -246,7 +252,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+         
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -255,7 +261,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+       
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -264,14 +270,17 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         
 
                 
-                //append
+           
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+       
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
                    
@@ -344,7 +353,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+         
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -353,7 +362,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+            
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -361,15 +370,16 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
         
 
-                
-                //append
+   
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
                    
@@ -445,7 +455,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+        
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -454,7 +464,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -463,14 +473,17 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         
 
                 
-                //append
+   
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+  
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
                    
@@ -545,7 +558,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+    
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -554,7 +567,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+             
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -563,14 +576,17 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         
 
                 
-                //append
+         
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+       
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
                    
@@ -644,7 +660,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -653,7 +669,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+            
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -662,14 +678,17 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         
 
                 
-                //append
+        
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+             
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
                    
@@ -745,7 +764,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+           
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -754,7 +773,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+               
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -763,14 +782,17 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         
 
                 
-                //append
+            
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+                
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
 
@@ -842,7 +864,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-                //create element
+           
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -851,7 +873,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = ''
                 
 
-                //class
+     
                 main_div.classList.add('tovar')
                 tovar_img.classList.add('timg')
                 tovar_p.classList.add('tp')
@@ -860,16 +882,19 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         
 
                 
-                //append
+      
                 main_div.append(tovar_img,tovar_p,tovar_btn)
                 s2_tovars.appendChild(main_div)
 
-                //innerHTML
+     
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
                 tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
                 tovar_btn.style.fontFamily = 'Inter'
+                if (tovar_p.innerHTML.length > 90) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                }
 
                 tovar_btn.id = i
                 var modal = document.getElementById("productModal");

@@ -4,27 +4,27 @@ const slides = document.querySelector('.slides');
 const images = document.querySelectorAll('.slide');
 let currentIndex = 0;
 
-// Function to calculate slide width dynamically
+
 const changeSlide = (direction) => {
     currentIndex += direction;
 
     if (currentIndex < 0) currentIndex = images.length - 1;
     if (currentIndex >= images.length) currentIndex = 0;
 
-    const slideWidth = images[0].offsetWidth; // Calculate the current slide width dynamically
+    const slideWidth = images[0].offsetWidth; 
     slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 };
 
-// Add event listeners for the buttons
+
 leftBtn.addEventListener('click', () => changeSlide(-1));
 rightBtn.addEventListener('click', () => changeSlide(1));
 
-// Automatically change slides every 5 seconds
+
 setInterval(() => changeSlide(1), 5000);
 
-// Optional: handle window resize to recalculate slide position
+
 window.addEventListener('resize', () => {
-    const slideWidth = images[0].offsetWidth; // Recalculate the slide width on window resize
+    const slideWidth = images[0].offsetWidth; 
     slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 });
 
@@ -34,7 +34,7 @@ const header = document.querySelector('header');
 menuIcon.addEventListener('click', function() {
     header.classList.toggle('menu-active');
     
-    // Hide menu if it's open when clicked again
+
     if (!header.classList.contains('menu-active')) {
         document.querySelector('.hnav').style.display = 'none';
     } else {
@@ -47,13 +47,13 @@ menuIcon.addEventListener('click', function() {
 
 
 
-// Api bilan ishlash
+
 
 fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.json()).then((res)=>{
     console.log(res)
 
 
-    //Api uchun function:
+    
     const s2_tovars = document.getElementById('s2tovs')
     
 
@@ -62,30 +62,33 @@ function cr_element(){
     for(i=0; i<12;i++){
         
     
-        //create element
+ 
         let main_div = document.createElement('div')
         let tovar_img = document.createElement('img')
         let tovar_p = document.createElement('p')
         let tovar_btn = document.createElement('button')
 
-        //class
+  
         main_div.classList.add('tovar')
         tovar_img.classList.add('timg')
         tovar_p.classList.add('tp')
         tovar_btn.classList.add('btn1')
     
-        //append
+    
         main_div.append(tovar_img,tovar_p,tovar_btn)
         s2_tovars.appendChild(main_div)
 
-        //innerHTML
+      
         
         tovar_img.src = res.results[i].image_file
         tovar_p.innerHTML = res.results[i].name
+        if (tovar_p.innerHTML.length > 90) {
+            tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+        }
         tovar_btn.innerHTML = 'ПОДРОБНЕЕ'
         tovar_btn.style.fontFamily = 'Inter'
 
-        //id
+
 
         tovar_btn.id = 'openModalBtn'+i
 
@@ -106,13 +109,13 @@ function cr_element(){
         var closeBtn = document.getElementsByClassName("closeBtn")[0];
         
     }
-    // Modal elementlarini olish
+
 
     let modal_img = document.getElementById('modalimg')
     let modal_h1 = document.getElementById('modalh1')
     let modal_p1 = document.getElementById('modalp1')
     let modal_p2 = document.getElementById('modalp2')
-// Modalni ochish
+
 openModalBtn0.onclick = function() {
     modal.style.display = "block";
     modal_img.src = res.results[0].image_file
@@ -209,12 +212,12 @@ openModalBtn11.onclick = function() {
 
 }
 
-// Modalni yopish
+
 closeBtn.onclick = function() {
     modal.style.display = "none";
 }
 
-// Modaldan tashqariga bosilganda yopish
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
