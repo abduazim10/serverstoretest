@@ -530,7 +530,7 @@ h1{
     border: 0;
 
     
-    margin: 0.9% auto;
+    margin:auto;
     
     
    
@@ -1239,13 +1239,8 @@ h1{
         width: 30px;
         height: 30px;
     }
-    .ti{
-        width: 572px;
-        margin-right: 20px;
-        border-radius: 20px;
-        height: 423px;
-    }
-
+    
+   
     .modal-header {
         padding: 10px;
         text-align: left;
@@ -1371,6 +1366,7 @@ h1{
         display: flex;
         flex-direction: row;
         padding: 10px;
+        height: 250px;
     }
     .socset{
         flex-direction: column;
@@ -1601,5 +1597,11 @@ h1{
     }
     .location_text{
         margin: 0;
+    }
+    .ti{
+        width: 290px;
+        margin-right: 0px;
+        border-radius: 20px;
+        height: 215px;
     }
 }
