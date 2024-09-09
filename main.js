@@ -83,8 +83,8 @@ function cr_element(){
         
         tovar_p.innerHTML = res.results[i].name
         tovar_btn.innerHTML = 'BATAFSIL'
-        if (tovar_p.innerHTML.length > 90) {
-            tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+        if (tovar_p.innerHTML.length > 60) {
+            tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
         }
   
 

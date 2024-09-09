@@ -81,8 +81,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
                 tovar_btn.innerHTML = 'BATAFSIL'
                    
@@ -185,8 +185,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
                 tovar_btn.innerHTML = 'BATAFSIL'
                    
@@ -291,8 +291,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
                 tovar_btn.innerHTML = 'BATAFSIL'
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
 
                 tovar_btn.id = i
@@ -394,8 +394,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
                 tovar_btn.innerHTML = 'BATAFSIL'
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
 
                 tovar_btn.id = i
@@ -500,8 +500,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
                 tovar_btn.innerHTML = 'BATAFSIL'
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
 
                 tovar_btn.id = i
@@ -605,8 +605,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
                 tovar_btn.innerHTML = 'BATAFSIL'
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
 
                 tovar_btn.id = i
@@ -709,8 +709,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
                 tovar_btn.innerHTML = 'BATAFSIL'
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
 
                 tovar_btn.id = i
@@ -814,8 +814,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
                 tovar_btn.innerHTML = 'BATAFSIL'
                    
@@ -918,8 +918,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 tovar_img.src = res.results[i].image_file
                 tovar_p.innerHTML = res.results[i].name
-                if (tovar_p.innerHTML.length > 90) {
-                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 90);
+                if (tovar_p.innerHTML.length > 60) {
+                    tovar_p.innerHTML = tovar_p.innerHTML.substring(0, 60);
                 }
                 tovar_btn.innerHTML = 'BATAFSIL'
                 tovar_btn.style.fontFamily = 'Inter'
