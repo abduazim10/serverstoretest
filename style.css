@@ -13,6 +13,17 @@ header{
     position: fixed;
     z-index: 1;
 }
+.old-price {
+    font-size: 21px; /* Меньший размер для старой цены */
+    color: #cecece;
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration-color: red; /* Красная линия зачёркивания */
+    text-decoration-thickness: 1.5px; /* Тонкая линия */
+    font-family:Inter;
+  }
 body{  
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -38,6 +49,70 @@ body{
 .icon2{
     width: 45px;
     
+}
+.poisk{
+    width: 100%;
+    background-color: white;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.poisk_d{
+    width: 500px;
+    background-color: white;
+    height: 40px;
+    border: 0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: #001819 3px solid;
+}
+.poisk_inp{
+    width: 460px;
+    height: 100%;
+    border: 0;
+    border-radius: 30px;
+    background-color: white;
+    padding: 10px;
+    outline: 0;
+    color: #001819;
+    font-size: Inter;
+    font-size: 15px;
+}
+.poisk_btn{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.poisk_btn2{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.poisk_img{
+    width: 20px;
+    height: 20px;
+}
+.poisk_img2{
+    width: 25px;
+    height: 25px;
+}
+.poisk_img2:hover{
+    transition: 0.8s ;
+    transform: scale(0.7);
 }
 
 .swipe{
@@ -786,7 +861,7 @@ h1{
   }
 .p_d{
     padding: 0 50px;
-    margin-top: 100px;
+    margin-top: 200px;
     align-items: center;
     justify-content: space-between;
     display: flex;
@@ -1603,5 +1678,52 @@ h1{
         margin-right: 0px;
         border-radius: 20px;
         height: 215px;
+    }
+    .poisk{
+        width: 100%;
+        background-color: white;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+    }
+    .poisk_d{
+        width: 300px;
+        background-color: white;
+        height: 30px;
+        border: 0;
+        border-radius: 30px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        border: #001819 3px solid;
+    }
+    .poisk_inp{
+        width: 260px;
+        height: 100%;
+        border: 0;
+        border-radius: 30px;
+        background-color: white;
+        padding: 10px;
+        outline: 0;
+        color: #001819;
+        font-size: Inter;
+        font-size: 12px;
+
+    }
+    .poisk_btn{
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .poisk_img{
+        width: 15px;
+        height: 15px;
     }
 }

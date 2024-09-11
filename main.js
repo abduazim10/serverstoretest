@@ -50,7 +50,8 @@ menuIcon.addEventListener('click', function() {
 
 fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.json()).then((res)=>{
 
-
+    console.log(res);
+    
 
   
     const s2_tovars = document.getElementById('s2tovs')
@@ -113,6 +114,8 @@ function cr_element(){
     let modal_h1 = document.getElementById('modalh1')
     let modal_p1 = document.getElementById('modalp1')
     let modal_p2 = document.getElementById('modalp2')
+    let modal_p3 = document.getElementById('modalp3')
+
 
 openModalBtn0.onclick = function() {
     modal.style.display = "block";
@@ -120,6 +123,26 @@ openModalBtn0.onclick = function() {
     modal_h1.innerHTML = res.results[0].model_name
     modal_p1.innerHTML = res.results[0].name
     modal_p2.innerHTML = res.results[0].price -'.00' + ' Som'
+    if (res.results[0].category == 1){
+        modal_p3.innerHTML = res.results[0].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[0].category == 2){
+        modal_p3.innerHTML = res.results[0].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[0].category == 3){
+        modal_p3.innerHTML = res.results[0].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[0].category == 4){
+        modal_p3.innerHTML = res.results[0].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[0].category == 5){
+        modal_p3.innerHTML = res.results[0].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[0].category == 6){ 
+        modal_p3.innerHTML = res.results[0].price - '.00' + 1999000 + ' Som'
+    }
+    
+   
 }
 openModalBtn1.onclick = function() {
     modal.style.display = "block";
@@ -127,6 +150,24 @@ openModalBtn1.onclick = function() {
     modal_h1.innerHTML = res.results[1].model_name
     modal_p1.innerHTML = res.results[1].name
     modal_p2.innerHTML = res.results[1].price -'.00' + ' Som'
+    if (res.results[1].category == 1){
+        modal_p3.innerHTML = res.results[1].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[1].category == 2){
+        modal_p3.innerHTML = res.results[1].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[1].category == 3){
+        modal_p3.innerHTML = res.results[1].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[1].category == 4){
+        modal_p3.innerHTML = res.results[1].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[1].category == 5){
+        modal_p3.innerHTML = res.results[1].price - '.00' + 999900 +  ' Som'
+    }
+    else if(res.results[1].category == 6){
+        modal_p3.innerHTML = res.results[1].price - '.00' + 1999000 + ' Som'
+    }
 
 }
 openModalBtn2.onclick = function() {
@@ -135,7 +176,24 @@ openModalBtn2.onclick = function() {
     modal_h1.innerHTML = res.results[2].model_name
     modal_p1.innerHTML = res.results[2].name
     modal_p2.innerHTML = res.results[2].price -'.00' + ' Som' 
-
+    if (res.results[2].category == 1){
+        modal_p3.innerHTML = res.results[2].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[2].category == 2){
+        modal_p3.innerHTML = res.results[2].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[2].category == 3){
+        modal_p3.innerHTML = res.results[2].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[2].category == 4){
+        modal_p3.innerHTML = res.results[2].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[2].category == 5){
+        modal_p3.innerHTML = res.results[2].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[2].category == 6){
+        modal_p3.innerHTML = res.results[2].price - '.00' + 1999000 + ' Som'
+    }
 }
 openModalBtn3.onclick = function() {
     modal.style.display = "block";
@@ -143,7 +201,24 @@ openModalBtn3.onclick = function() {
     modal_h1.innerHTML = res.results[3].model_name
     modal_p1.innerHTML = res.results[3].name
     modal_p2.innerHTML = res.results[3].price -'.00' + ' Som'
-
+    if (res.results[3].category == 1){
+        modal_p3.innerHTML = res.results[3].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[3].category == 2){
+        modal_p3.innerHTML = res.results[3].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[3].category == 3){
+        modal_p3.innerHTML = res.results[3].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[3].category == 4){
+        modal_p3.innerHTML = res.results[3].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[3].category == 5){
+        modal_p3.innerHTML = res.results[3].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[3].category == 6){
+        modal_p3.innerHTML = res.results[3].price - '.00' + 1999000 + ' Som'
+    }
 }
 openModalBtn4.onclick = function() {
     modal.style.display = "block";
@@ -151,7 +226,24 @@ openModalBtn4.onclick = function() {
     modal_h1.innerHTML = res.results[4].model_name
     modal_p1.innerHTML = res.results[4].name
     modal_p2.innerHTML = res.results[4].price -'.00' + ' Som'
-
+    if (res.results[4].category == 1){
+        modal_p3.innerHTML = res.results[4].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[4].category == 2){
+        modal_p3.innerHTML = res.results[4].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[4].category == 3){ 
+        modal_p3.innerHTML = res.results[4].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[4].category == 4){
+        modal_p3.innerHTML = res.results[4].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[4].category == 5){
+        modal_p3.innerHTML = res.results[4].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[4].category == 6){
+        modal_p3.innerHTML = res.results[4].price - '.00' + 1999000 + ' Som'
+    }
 }
 openModalBtn5.onclick = function() {
     modal.style.display = "block";
@@ -159,7 +251,24 @@ openModalBtn5.onclick = function() {
     modal_h1.innerHTML = res.results[5].model_name
     modal_p1.innerHTML = res.results[5].name
     modal_p2.innerHTML = res.results[5].price -'.00' + ' Som'
-
+    if (res.results[5].category == 1){
+        modal_p3.innerHTML = res.results[5].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[5].category == 2){
+        modal_p3.innerHTML = res.results[5].price - '.00' + 999000 +  ' Som'
+    }
+    else if(res.results[5].category == 3){
+        modal_p3.innerHTML = res.results[5].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[5].category == 4){
+        modal_p3.innerHTML = res.results[5].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[5].category == 5){
+        modal_p3.innerHTML = res.results[5].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[5].category == 6){
+        modal_p3.innerHTML = res.results[5].price - '.00' + 1999000 + ' Som'
+    }
 }
 openModalBtn6.onclick = function() {
     modal.style.display = "block";
@@ -167,7 +276,24 @@ openModalBtn6.onclick = function() {
     modal_h1.innerHTML = res.results[6].model_name
     modal_p1.innerHTML = res.results[6].name
     modal_p2.innerHTML = res.results[6].price  -'.00' + ' Som'
-
+    if (res.results[6].category == 1){
+        modal_p3.innerHTML = res.results[6].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[6].category == 2){
+        modal_p3.innerHTML = res.results[6].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[6].category == 3){
+        modal_p3.innerHTML = res.results[6].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[6].category == 4){
+        modal_p3.innerHTML = res.results[6].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[6].category == 5){
+        modal_p3.innerHTML = res.results[6].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[6].category == 6){
+        modal_p3.innerHTML = res.results[6].price - '.00' + 1999000 + ' Som'
+    }
 }
 openModalBtn7.onclick = function() {
     modal.style.display = "block";
@@ -175,7 +301,24 @@ openModalBtn7.onclick = function() {
     modal_h1.innerHTML = res.results[7].model_name
     modal_p1.innerHTML = res.results[7].name
     modal_p2.innerHTML = res.results[7].price -'.00' + ' Som'
-
+    if (res.results[7].category == 1){
+        modal_p3.innerHTML = res.results[7].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[7].category == 2){
+        modal_p3.innerHTML = res.results[7].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[7].category == 3){
+        modal_p3.innerHTML = res.results[7].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[7].category == 4){
+        modal_p3.innerHTML = res.results[7].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[7].category == 5){
+        modal_p3.innerHTML = res.results[7].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[7].category == 6){
+        modal_p3.innerHTML = res.results[7].price - '.00' + 1999000 + ' Som'
+    }
 }
 openModalBtn8.onclick = function() {
     modal.style.display = "block";
@@ -183,7 +326,24 @@ openModalBtn8.onclick = function() {
     modal_h1.innerHTML = res.results[8].model_name
     modal_p1.innerHTML = res.results[8].name
     modal_p2.innerHTML = res.results[8].price -'.00' + ' Som'
-
+    if (res.results[8].category == 1){
+        modal_p3.innerHTML = res.results[8].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[8].category == 2){
+        modal_p3.innerHTML = res.results[8].price - '.00' + 999000 + ' Som'
+    }
+    else if(res.results[8].category == 3){
+        modal_p3.innerHTML = res.results[8].price - '.00' + 499800 + ' Som'
+    }
+    else if(res.results[8].category == 4){
+        modal_p3.innerHTML = res.results[8].price - '.00' + 999920 + ' Som'
+    }
+    else if(res.results[8].category == 5){
+        modal_p3.innerHTML = res.results[8].price - '.00' + 999900 + ' Som'
+    }
+    else if(res.results[8].category == 6){
+        modal_p3.innerHTML = res.results[8].price - '.00' + 1999000 + ' Som'
+    }
 }
 openModalBtn9.onclick = function() {
     modal.style.display = "block";
@@ -191,7 +351,24 @@ openModalBtn9.onclick = function() {
     modal_h1.innerHTML = res.results[9].model_name
     modal_p1.innerHTML = res.results[9].name
     modal_p2.innerHTML = res.results[9].price -'.00' + ' Som'
-
+    if (res.results[9].category == 1){
+        modal_p3.innerHTML = res.results[9].price - '.00' + 9480000 + ' Som'
+    }
+    else if(res.results[9].category == 2){
+        modal_p3.innerHTML = res.results[9].price - '.00' + 999000+ ' Som'
+    }
+    else if(res.results[9].category == 3){
+        modal_p3.innerHTML = res.results[9].price - '.00' + 499800+ ' Som'
+    }
+    else if(res.results[9].category == 4){
+        modal_p3.innerHTML = res.results[9].price - '.00' + 999920+  ' Som'
+    }
+    else if(res.results[9].category == 5){
+        modal_p3.innerHTML = res.results[9].price - '.00' + 999900+ ' Som'
+    }
+    else if(res.results[9].category == 6){
+        modal_p3.innerHTML = res.results[9].price - '.00' + 1999000+ ' Som'
+    }
 }
 openModalBtn10.onclick = function() {
     modal.style.display = "block";
@@ -199,7 +376,24 @@ openModalBtn10.onclick = function() {
     modal_h1.innerHTML = res.results[10].model_name
     modal_p1.innerHTML = res.results[10].name
     modal_p2.innerHTML = res.results[10].price -'.00' + ' Som'
-
+    if (res.results[10].category == 1){
+        modal_p3.innerHTML = res.results[10].price - '.00' + 9480000+ ' Som'
+    }
+    else if(res.results[10].category == 2){
+        modal_p3.innerHTML = res.results[10].price - '.00' + 999000+ ' Som'
+    }
+    else if(res.results[10].category == 3){
+        modal_p3.innerHTML = res.results[10].price - '.00' + 499800+  ' Som'
+    }
+    else if(res.results[10].category == 4){
+        modal_p3.innerHTML = res.results[10].price - '.00' + 999920+ ' Som'
+    }
+    else if(res.results[10].category == 5){
+        modal_p3.innerHTML = res.results[10].price - '.00' + 999900+ ' Som'
+    }
+    else if(res.results[10].category == 6){
+        modal_p3.innerHTML = res.results[10].price - '.00' + 1999000+ ' Som'
+    }
 }
 openModalBtn11.onclick = function() {
     modal.style.display = "block";
@@ -207,7 +401,24 @@ openModalBtn11.onclick = function() {
     modal_h1.innerHTML = res.results[11].model_name
     modal_p1.innerHTML = res.results[11].name
     modal_p2.innerHTML = res.results[11].price -'.00' + ' Som'
-
+    if (res.results[11].category == 1){
+        modal_p3.innerHTML = res.results[11].price - '.00' + 9480000+ ' Som'
+    }
+    else if(res.results[11].category == 2){
+        modal_p3.innerHTML = res.results[11].price - '.00' + 999000+ ' Som'
+    }
+    else if(res.results[11].category == 3){
+        modal_p3.innerHTML = res.results[11].price - '.00' + 499800+ ' Som'
+    }
+    else if(res.results[11].category == 4){
+        modal_p3.innerHTML = res.results[11].price - '.00' + 999920+ ' Som'
+    }
+    else if(res.results[11].category == 5){
+        modal_p3.innerHTML = res.results[11].price - '.00' + 999900+ ' Som'
+    }
+    else if(res.results[11].category == 6){
+        modal_p3.innerHTML = res.results[11].price - '.00' + 1999000+ ' Som'
+    }
 }
 
 
