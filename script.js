@@ -1214,6 +1214,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
                 let modal_p2 = document.getElementById('modalp2')
+                let modal_p3 = document.getElementById('modalp3')
+
                 tovar_btn.addEventListener('click' ,()=>{
                     
                     for (i=0;i<201;i++){
@@ -1226,6 +1228,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     

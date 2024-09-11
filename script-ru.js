@@ -80,7 +80,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 tovar_btn.id = i
                 var modal = document.getElementById("productModal");
         
-        
+                let modal_p3 = document.getElementById('modalp3')
+                
                 var closeBtn = document.getElementsByClassName("closeBtn")[0];
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
@@ -98,7 +99,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -150,7 +168,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-      
+                let modal_p3 = document.getElementById('modalp3')
+                
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -205,7 +224,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -258,7 +294,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
-         
+                let modal_p3 = document.getElementById('modalp3')
+                
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')
@@ -313,7 +350,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -363,6 +417,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 page_btn9.style.color = '#002627'
                 page_btn9.style.background = 'white'
                 
+                let modal_p3 = document.getElementById('modalp3')
                 
                 
          
@@ -418,7 +473,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -470,6 +542,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 page_btn8.style.background = 'white'
                 page_btn9.style.color = '#002627'
                 page_btn9.style.background = 'white'
+                let modal_p3 = document.getElementById('modalp3')
                 
                 
                 
@@ -528,7 +601,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -582,6 +672,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
+                let modal_p3 = document.getElementById('modalp3')
     
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
@@ -637,7 +728,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -690,6 +798,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 
                 
                 
+                let modal_p3 = document.getElementById('modalp3')
 
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
@@ -745,7 +854,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -778,6 +904,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
         for (i=0; i<1000; i++){
             if (res.results[i].model_name == 'DELL'){
                 counts = counts+1
+                let modal_p3 = document.getElementById('modalp3')
 
                 page_btn1.style.color = '#002627'
                 page_btn1.style.background = 'white'
@@ -854,7 +981,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -903,6 +1047,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 page_btn8.style.background = 'white'
                 page_btn9.style.color = 'white'
                 page_btn9.style.background = '#002627'
+                let modal_p3 = document.getElementById('modalp3')
                 
                 
                 
@@ -960,7 +1105,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
@@ -1005,6 +1167,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
             page_btn9.style.color = '#002627'
             page_btn9.style.background = 'white'
             poisk_inp.value.toLowerCase()
+            let modal_p3 = document.getElementById('modalp3')
             
             
             if(res.results[i].model_name.toLowerCase().includes(poisk_inp.value.toLowerCase()) || res.results[i].name.toLowerCase().includes(poisk_inp.value.toLowerCase())) {
@@ -1060,6 +1223,24 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
+                            if (res.results[i].category == 1){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
+                            }
+                            else if(res.results[i].category == 2){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
+                            }
+                            else if(res.results[i].category == 3){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
+                            }
+                            else if(res.results[i].category == 4){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
+                            }
+                            else if(res.results[i].category == 5){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
+                            }
+                            else if(res.results[i].category == 6){
+                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
+                            }
                         }
                     }
                     
