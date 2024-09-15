@@ -23,7 +23,7 @@ header{
     text-decoration-color: red; /* Красная линия зачёркивания */
     text-decoration-thickness: 1.5px; /* Тонкая линия */
     font-family:Inter;
-    margin-top: 5px;
+    margin-top: 5px ;
   }
 body{  
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -177,6 +177,7 @@ body{
     flex-direction: column;
     padding: 0 50px;
 }
+
 .tovar{
     width: 220px;
     height: 333px;

@@ -50,13 +50,12 @@ menuIcon.addEventListener('click', function() {
 
 fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.json()).then((res)=>{
 
-    console.log(res);
+
     
 
   
     const s2_tovars = document.getElementById('s2tovs')
-    let cr_table_divv = document.createElement('div') //cher
-
+    
 
 function cr_element(){
     for(i=0; i<12;i++){
