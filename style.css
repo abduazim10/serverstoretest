@@ -14,6 +14,27 @@ header{
     z-index: 1;
 }
 
+#s1{
+    padding: 50px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+.images1{
+    width: 150px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: all ease-in-out 0.5s;
+}
+.images1:hover{
+    width:253px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    gap: 5px;
+}
 
 
 
@@ -120,10 +141,7 @@ body{
     transform: scale(0.7);
 }
 
-.swipe{
-    padding: 100px 50px 50px;
-    
-}
+
 
 #img1{
     border-radius: 20px;
@@ -153,26 +171,7 @@ body{
     color: rgb(0, 125, 125);
     transition: none;
 }
-.hnav2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-.hnav2 a{
-    font-size: 19px;
-    text-decoration: none;
-    color: black;
-    font-family: Inder;
-}
-.hnav2 a:hover{
-    color: rgb(2, 188, 187);
-    transition: 0.7s;
-}
-.hnav2 a:active{
-    color: rgb(0, 125, 125);
-    transition: none;
-}
+
 .s2{
 
     display: flex;
@@ -419,7 +418,7 @@ h1{
 }
 .foot{
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: white;
     margin-bottom: 150px;
     display: flex;
@@ -427,24 +426,43 @@ h1{
     align-items: center;
     justify-content: space-between;
     padding: 25px 50px;
+}   
+.hnav2{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
 }
-.soc{
-    border: 0;
-    border-radius: 5px;
-    height: 30px;
-    cursor: pointer;
+.hnav2 a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-family: Inder;
 }
+.hnav2 a:hover{
+    color: rgb(2, 188, 187);
+    transition: 0.7s;
+}
+.hnav2 a:active{
+    color: rgb(0, 125, 125);
+    transition: none;
+}
+
+
 .soc2{
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
     border:0 ;
     cursor: pointer;
 }
+
 .socset{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     cursor: pointer;
     
 }
@@ -457,26 +475,13 @@ h1{
 .navaa{
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 100%;
     justify-content: space-between;
-    width: 100%;
+    margin-top: 40px;
 }
-#swipea{
-    height: 500px;
-    margin: 0px 20px;
-    width: 100px;
-}
-#img1{
-    height:100%;
-    width: 100%;
-    
-}
-#left{
-    width: 50px;
-    
-}
-#right{
-    width: 50px;
-}
+
+
 .rasm{
     width: 50px;
 }
@@ -1223,7 +1228,7 @@ h1{
         user-select: none;
     }
 
-
+    
 
 
     .tovar{
@@ -1424,16 +1429,21 @@ h1{
         margin-right: 5px;
     }
     .navaa{
-        flex-direction: column;
-        align-items: start;
+        flex-wrap: wrap;
+        align-items: center;
+        gap:  30px 150px;
+        justify-content: center;
+        margin-top: 20px;
     }
+    
     .hnav2{
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        gap: 15px;
+        gap: 5px;
         margin-top:10px ;
+        width: 100px;
     }
     .hnav2 a{
         font-size: 19px;
@@ -1445,13 +1455,16 @@ h1{
     
     .foot{
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+        
         padding: 10px;
-        height: 250px;
+        height: auto;
     }
     .socset{
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 20px;
+        flex-direction: row;
+        margin-left: px;
     }
     .soc2{
         width: 25px;
@@ -1737,23 +1750,20 @@ h1{
         width: 15px;
         height: 15px;
     }
-}
-.s1{
-    padding: 50px;
-}
-.images1{
-    width: 150px;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 25px;
-    transition: all ease-in-out 0.5s;
-}
-.images1:hover{
-    width:253px;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    height: 450px;
-    gap: 5px;
+    #s1{
+        padding: 10px;
+    }
+    .container{
+        height:220px ;
+    }
+    .images1{
+        width: 60px;
+        height: 213.33px;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: all ease-in-out 0.5s;
+    }
+    .images1:hover{
+        width:120px;
+    }
 }
