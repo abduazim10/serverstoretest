@@ -1,5 +1,6 @@
 
 fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.json()).then((res)=>{
+    console.log(res);
     
     let page_btn1 = document.querySelector('.mahsulot_btn1')
     let page_btn2 = document.querySelector('.mahsulot_btn2')
@@ -87,7 +88,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
 
                 tovar_btn.addEventListener('click' ,()=>{
                     
-                    for (i=0;i<201;i++){
+                    for (i=0;i<500;i++){
                         if(tovar_btn.id == i){
                         
                         
@@ -1138,7 +1139,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
        
         let s2_tovars = document.querySelector('.s2_as')
         s2_tovars.innerHTML = ''
-        for (i=0;i<200;i++){
+        for (i=0;i<500;i++){
             page_btn1.style.color = '#002627'
             page_btn1.style.background = 'white'
             page_btn2.style.color = '#002627'
@@ -1160,7 +1161,7 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
             poisk_inp.value.toLowerCase()
             
             
-            if(res.results[i].model_name.toLowerCase().includes(poisk_inp.value.toLowerCase()) || res.results[i].name.toLowerCase().includes(poisk_inp.value.toLowerCase())) {
+            if(res.results[i].model_name.toLowerCase().includes(poisk_inp.value.toLowerCase()) || res.results[i].name.toLowerCase().includes(poisk_inp.value.toLowerCase())){
                 let main_div = document.createElement('div')
                 let tovar_img = document.createElement('img')
                 let tovar_p = document.createElement('p')

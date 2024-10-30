@@ -1,31 +1,3 @@
-const leftBtn = document.getElementById('left');
-const rightBtn = document.getElementById('right');
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slide');
-let currentIndex = 0;
-
-
-const changeSlide = (direction) => {
-    currentIndex += direction;
-
-    if (currentIndex < 0) currentIndex = images.length - 1;
-    if (currentIndex >= images.length) currentIndex = 0;
-
-    const slideWidth = images[0].offsetWidth; 
-    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-};
-
-leftBtn.addEventListener('click', () => changeSlide(-1));
-rightBtn.addEventListener('click', () => changeSlide(1));
-
-
-setInterval(() => changeSlide(1), 5000);
-
-
-window.addEventListener('resize', () => {
-    const slideWidth = images[0].offsetWidth; 
-    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-});
 
 const menuIcon = document.getElementById('menu-icon');
 const header = document.querySelector('header');

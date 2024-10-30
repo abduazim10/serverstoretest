@@ -13,6 +13,10 @@ header{
     position: fixed;
     z-index: 1;
 }
+
+
+
+
 .old-price {
     font-size: 21px; /* Меньший размер для старой цены */
     color: #cecece;
@@ -1733,4 +1737,23 @@ h1{
         width: 15px;
         height: 15px;
     }
+}
+.s1{
+    padding: 50px;
+}
+.images1{
+    width: 150px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: all ease-in-out 0.5s;
+}
+.images1:hover{
+    width:253px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    gap: 5px;
 }
