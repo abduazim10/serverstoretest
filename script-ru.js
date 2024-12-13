@@ -10,7 +10,14 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
     let page_btn8 = document.querySelector('.mahsulot_btn8')
     let page_btn9 = document.querySelector('.mahsulot_btn9')
 
+    function formatNumber(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Minglar ajratish
+    }
     
+    function addPercentage(price, percentage) {
+        const addedAmount = price * (percentage / 100);
+        return price + addedAmount;
+    }
 
     
 
@@ -98,25 +105,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -223,25 +217,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -349,25 +330,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -472,25 +440,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -600,25 +555,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -727,25 +669,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -853,25 +782,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -980,25 +896,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -1104,25 +1007,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     
@@ -1222,25 +1112,12 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_img.src = res.results[i].image_file
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
-                            modal_p2.innerHTML = res.results[i].price - '.00'+' Som'
-                            if (res.results[i].category == 1){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 9480000+ ' Som'
-                            }
-                            else if(res.results[i].category == 2){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999000+ ' Som'
-                            }
-                            else if(res.results[i].category == 3){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 499800+ ' Som'
-                            }
-                            else if(res.results[i].category == 4){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999920+ ' Som'
-                            }
-                            else if(res.results[i].category == 5){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 999900+ ' Som'
-                            }
-                            else if(res.results[i].category == 6){
-                                modal_p3.innerHTML = res.results[i].price - '.00' + 1999000+ ' Som'
-                            }
+                            let narx = parseInt(res.results[i].price);
+                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+                            let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+                            skidka_narx = Math.round(skidka_narx);
+                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     

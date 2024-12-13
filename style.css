@@ -40,12 +40,12 @@ header{
 
 .old-price {
     font-size: 21px; /* Меньший размер для старой цены */
-    color: #cecece;
+    color: #B0BEC5   ;
     text-decoration: line-through;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration-color: red; /* Красная линия зачёркивания */
+    text-decoration-color: #B0BEC5; /* Красная линия зачёркивания */
     text-decoration-thickness: 1.5px; /* Тонкая линия */
     font-family:Inter;
     margin-top: 5px ;

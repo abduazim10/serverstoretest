@@ -23,6 +23,7 @@ menuIcon.addEventListener('click', function() {
 fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.json()).then((res)=>{
 
 
+
     
 
   
@@ -88,307 +89,69 @@ function cr_element(){
     let modal_p3 = document.getElementById('modalp3')
 
 
-openModalBtn0.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[0].image_file
-    modal_h1.innerHTML = res.results[0].model_name
-    modal_p1.innerHTML = res.results[0].name
-    modal_p2.innerHTML = res.results[0].price -'.00' + ' Som'
-    if (res.results[0].category == 1){
-        modal_p3.innerHTML = res.results[0].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[0].category == 2){
-        modal_p3.innerHTML = res.results[0].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[0].category == 3){
-        modal_p3.innerHTML = res.results[0].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[0].category == 4){
-        modal_p3.innerHTML = res.results[0].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[0].category == 5){
-        modal_p3.innerHTML = res.results[0].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[0].category == 6){ 
-        modal_p3.innerHTML = res.results[0].price - '.00' + 1999000 + ' Som'
-    }
+
+
+
+
+
+
     
-   
+function formatNumber(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Minglar ajratish
 }
-openModalBtn1.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[1].image_file
-    modal_h1.innerHTML = res.results[1].model_name
-    modal_p1.innerHTML = res.results[1].name
-    modal_p2.innerHTML = res.results[1].price -'.00' + ' Som'
-    if (res.results[1].category == 1){
-        modal_p3.innerHTML = res.results[1].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[1].category == 2){
-        modal_p3.innerHTML = res.results[1].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[1].category == 3){
-        modal_p3.innerHTML = res.results[1].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[1].category == 4){
-        modal_p3.innerHTML = res.results[1].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[1].category == 5){
-        modal_p3.innerHTML = res.results[1].price - '.00' + 999900 +  ' Som'
-    }
-    else if(res.results[1].category == 6){
-        modal_p3.innerHTML = res.results[1].price - '.00' + 1999000 + ' Som'
+
+function addPercentage(price, percentage) {
+    const addedAmount = price * (percentage / 100);
+    return price + addedAmount;
+}
+// Modalni ochish uchun funktsiya
+
+
+function handleModalOpen(buttonIndex) {
+    const tovarId = res.results[buttonIndex].id;
+    const url = `tovar${tovarId}.html`;
+
+    // Modal kontentini yangilash funksiyasi
+    function updateModalContent() {
+        modal.style.display = "block"; // Modalni ko'rsatish
+
+        modal_img.src = res.results[buttonIndex].image_file;
+        modal_h1.innerHTML = res.results[buttonIndex].model_name;
+        modal_p1.innerHTML = res.results[buttonIndex].name;
+
+        // Raqqamni to'g'ri formatlash va chiqarish
+        let narx = parseInt(res.results[buttonIndex].price);
+        modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+
+        let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
+        skidka_narx = Math.round(skidka_narx);
+        modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
     }
 
+    // Tovar sahifasi mavjudligini tekshirish
+    fetch(url, { method: 'HEAD' })
+        .then(response => {
+            if (response.ok) {
+                // Agar sahifa mavjud bo'lsa, unga o'tish
+                window.location.href = url;
+            } else {
+                // Aks holda, modalni ko'rsatish
+                updateModalContent();
+            }
+        })
+        .catch(error => {
+            // Xato yuz bersa ham, modalni ko'rsatish
+            updateModalContent();
+        });
 }
-openModalBtn2.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[2].image_file
-    modal_h1.innerHTML = res.results[2].model_name
-    modal_p1.innerHTML = res.results[2].name
-    modal_p2.innerHTML = res.results[2].price -'.00' + ' Som' 
-    if (res.results[2].category == 1){
-        modal_p3.innerHTML = res.results[2].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[2].category == 2){
-        modal_p3.innerHTML = res.results[2].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[2].category == 3){
-        modal_p3.innerHTML = res.results[2].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[2].category == 4){
-        modal_p3.innerHTML = res.results[2].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[2].category == 5){
-        modal_p3.innerHTML = res.results[2].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[2].category == 6){
-        modal_p3.innerHTML = res.results[2].price - '.00' + 1999000 + ' Som'
-    }
-}
-openModalBtn3.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[3].image_file
-    modal_h1.innerHTML = res.results[3].model_name
-    modal_p1.innerHTML = res.results[3].name
-    modal_p2.innerHTML = res.results[3].price -'.00' + ' Som'
-    if (res.results[3].category == 1){
-        modal_p3.innerHTML = res.results[3].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[3].category == 2){
-        modal_p3.innerHTML = res.results[3].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[3].category == 3){
-        modal_p3.innerHTML = res.results[3].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[3].category == 4){
-        modal_p3.innerHTML = res.results[3].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[3].category == 5){
-        modal_p3.innerHTML = res.results[3].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[3].category == 6){
-        modal_p3.innerHTML = res.results[3].price - '.00' + 1999000 + ' Som'
-    }
-}
-openModalBtn4.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[4].image_file
-    modal_h1.innerHTML = res.results[4].model_name
-    modal_p1.innerHTML = res.results[4].name
-    modal_p2.innerHTML = res.results[4].price -'.00' + ' Som'
-    if (res.results[4].category == 1){
-        modal_p3.innerHTML = res.results[4].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[4].category == 2){
-        modal_p3.innerHTML = res.results[4].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[4].category == 3){ 
-        modal_p3.innerHTML = res.results[4].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[4].category == 4){
-        modal_p3.innerHTML = res.results[4].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[4].category == 5){
-        modal_p3.innerHTML = res.results[4].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[4].category == 6){
-        modal_p3.innerHTML = res.results[4].price - '.00' + 1999000 + ' Som'
-    }
-}
-openModalBtn5.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[5].image_file
-    modal_h1.innerHTML = res.results[5].model_name
-    modal_p1.innerHTML = res.results[5].name
-    modal_p2.innerHTML = res.results[5].price -'.00' + ' Som'
-    if (res.results[5].category == 1){
-        modal_p3.innerHTML = res.results[5].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[5].category == 2){
-        modal_p3.innerHTML = res.results[5].price - '.00' + 999000 +  ' Som'
-    }
-    else if(res.results[5].category == 3){
-        modal_p3.innerHTML = res.results[5].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[5].category == 4){
-        modal_p3.innerHTML = res.results[5].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[5].category == 5){
-        modal_p3.innerHTML = res.results[5].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[5].category == 6){
-        modal_p3.innerHTML = res.results[5].price - '.00' + 1999000 + ' Som'
-    }
-}
-openModalBtn6.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[6].image_file
-    modal_h1.innerHTML = res.results[6].model_name
-    modal_p1.innerHTML = res.results[6].name
-    modal_p2.innerHTML = res.results[6].price  -'.00' + ' Som'
-    if (res.results[6].category == 1){
-        modal_p3.innerHTML = res.results[6].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[6].category == 2){
-        modal_p3.innerHTML = res.results[6].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[6].category == 3){
-        modal_p3.innerHTML = res.results[6].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[6].category == 4){
-        modal_p3.innerHTML = res.results[6].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[6].category == 5){
-        modal_p3.innerHTML = res.results[6].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[6].category == 6){
-        modal_p3.innerHTML = res.results[6].price - '.00' + 1999000 + ' Som'
-    }
-}
-openModalBtn7.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[7].image_file
-    modal_h1.innerHTML = res.results[7].model_name
-    modal_p1.innerHTML = res.results[7].name
-    modal_p2.innerHTML = res.results[7].price -'.00' + ' Som'
-    if (res.results[7].category == 1){
-        modal_p3.innerHTML = res.results[7].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[7].category == 2){
-        modal_p3.innerHTML = res.results[7].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[7].category == 3){
-        modal_p3.innerHTML = res.results[7].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[7].category == 4){
-        modal_p3.innerHTML = res.results[7].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[7].category == 5){
-        modal_p3.innerHTML = res.results[7].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[7].category == 6){
-        modal_p3.innerHTML = res.results[7].price - '.00' + 1999000 + ' Som'
-    }
-}
-openModalBtn8.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[8].image_file
-    modal_h1.innerHTML = res.results[8].model_name
-    modal_p1.innerHTML = res.results[8].name
-    modal_p2.innerHTML = res.results[8].price -'.00' + ' Som'
-    if (res.results[8].category == 1){
-        modal_p3.innerHTML = res.results[8].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[8].category == 2){
-        modal_p3.innerHTML = res.results[8].price - '.00' + 999000 + ' Som'
-    }
-    else if(res.results[8].category == 3){
-        modal_p3.innerHTML = res.results[8].price - '.00' + 499800 + ' Som'
-    }
-    else if(res.results[8].category == 4){
-        modal_p3.innerHTML = res.results[8].price - '.00' + 999920 + ' Som'
-    }
-    else if(res.results[8].category == 5){
-        modal_p3.innerHTML = res.results[8].price - '.00' + 999900 + ' Som'
-    }
-    else if(res.results[8].category == 6){
-        modal_p3.innerHTML = res.results[8].price - '.00' + 1999000 + ' Som'
-    }
-}
-openModalBtn9.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[9].image_file
-    modal_h1.innerHTML = res.results[9].model_name
-    modal_p1.innerHTML = res.results[9].name
-    modal_p2.innerHTML = res.results[9].price -'.00' + ' Som'
-    if (res.results[9].category == 1){
-        modal_p3.innerHTML = res.results[9].price - '.00' + 9480000 + ' Som'
-    }
-    else if(res.results[9].category == 2){
-        modal_p3.innerHTML = res.results[9].price - '.00' + 999000+ ' Som'
-    }
-    else if(res.results[9].category == 3){
-        modal_p3.innerHTML = res.results[9].price - '.00' + 499800+ ' Som'
-    }
-    else if(res.results[9].category == 4){
-        modal_p3.innerHTML = res.results[9].price - '.00' + 999920+  ' Som'
-    }
-    else if(res.results[9].category == 5){
-        modal_p3.innerHTML = res.results[9].price - '.00' + 999900+ ' Som'
-    }
-    else if(res.results[9].category == 6){
-        modal_p3.innerHTML = res.results[9].price - '.00' + 1999000+ ' Som'
-    }
-}
-openModalBtn10.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[10].image_file
-    modal_h1.innerHTML = res.results[10].model_name
-    modal_p1.innerHTML = res.results[10].name
-    modal_p2.innerHTML = res.results[10].price -'.00' + ' Som'
-    if (res.results[10].category == 1){
-        modal_p3.innerHTML = res.results[10].price - '.00' + 9480000+ ' Som'
-    }
-    else if(res.results[10].category == 2){
-        modal_p3.innerHTML = res.results[10].price - '.00' + 999000+ ' Som'
-    }
-    else if(res.results[10].category == 3){
-        modal_p3.innerHTML = res.results[10].price - '.00' + 499800+  ' Som'
-    }
-    else if(res.results[10].category == 4){
-        modal_p3.innerHTML = res.results[10].price - '.00' + 999920+ ' Som'
-    }
-    else if(res.results[10].category == 5){
-        modal_p3.innerHTML = res.results[10].price - '.00' + 999900+ ' Som'
-    }
-    else if(res.results[10].category == 6){
-        modal_p3.innerHTML = res.results[10].price - '.00' + 1999000+ ' Som'
-    }
-}
-openModalBtn11.onclick = function() {
-    modal.style.display = "block";
-    modal_img.src = res.results[11].image_file
-    modal_h1.innerHTML = res.results[11].model_name
-    modal_p1.innerHTML = res.results[11].name
-    modal_p2.innerHTML = res.results[11].price -'.00' + ' Som'
-    if (res.results[11].category == 1){
-        modal_p3.innerHTML = res.results[11].price - '.00' + 9480000+ ' Som'
-    }
-    else if(res.results[11].category == 2){
-        modal_p3.innerHTML = res.results[11].price - '.00' + 999000+ ' Som'
-    }
-    else if(res.results[11].category == 3){
-        modal_p3.innerHTML = res.results[11].price - '.00' + 499800+ ' Som'
-    }
-    else if(res.results[11].category == 4){
-        modal_p3.innerHTML = res.results[11].price - '.00' + 999920+ ' Som'
-    }
-    else if(res.results[11].category == 5){
-        modal_p3.innerHTML = res.results[11].price - '.00' + 999900+ ' Som'
-    }
-    else if(res.results[11].category == 6){
-        modal_p3.innerHTML = res.results[11].price - '.00' + 1999000+ ' Som'
+
+// Har bir tugma uchun hodisalarni o'rnatish
+for (let i = 0; i <= 11; i++) {
+    const button = document.getElementById(`openModalBtn${i}`);
+    if (button) {
+        button.onclick = function() {
+            handleModalOpen(i);
+        };
     }
 }
 
