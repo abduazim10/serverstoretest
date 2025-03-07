@@ -16,7 +16,69 @@ menuIcon.addEventListener('click', function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const phoneInput = document.getElementById('phone');
+    const form = document.getElementById('phoneForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    // Маска ввода для телефона
+   
+  
+    // Отправка формы
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Простой пример проверки (проверка на 9 цифр, без учета символов)
+      const phoneValue = phoneInput.value.replace(/\D/g, '');
+      if (phoneValue.length > 12) {
+        formMessage.textContent = 'Iltimos to\'g\'ri telefon raqam kiriting.';
+        formMessage.classList.add('error');
+      } else {
+        // Отправка данных на сервер
+        const formData = new FormData(form);
+        const data = {
+          phone: formData.get('phone')
+        };
+  
 
+        fetch('https://serverstorecallback.pythonanywhere.com/callback/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.text())  // <-- Меняем на text() для точного вывода
+        .then(text => {
+          try {
+            let data = JSON.parse(text);
+            console.log('Parsed JSON:', data);
+            if (data.success) { 
+              formMessage.textContent = 'Raqamingiz qabul qilindi. Tez orada siz bilan bog\'lanamiz.';
+              formMessage.classList.remove('error');
+              formMessage.classList.add('success');
+              phoneInput.value = ''; 
+            } else {
+              formMessage.textContent = 'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.';
+              formMessage.classList.add('error');
+            }
+          } catch (error) {
+            console.error('JSON parse error:', error);
+            formMessage.textContent = 'Server noto‘g‘ri javob qaytardi.';
+            formMessage.classList.add('error');
+          }
+        })
+        .catch(error => {
+          console.error('Fetch error:', error);
+          formMessage.textContent = 'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.';
+          formMessage.classList.add('error');
+        });
+        
+      }
+    });
+  });
+  
+  
 
 
 
@@ -85,8 +147,8 @@ function cr_element(){
     let modal_img = document.getElementById('modalimg')
     let modal_h1 = document.getElementById('modalh1')
     let modal_p1 = document.getElementById('modalp1')
-    let modal_p2 = document.getElementById('modalp2')
-    let modal_p3 = document.getElementById('modalp3')
+    // let modal_p2 = document.getElementById('modalp2')
+    // let modal_p3 = document.getElementById('modalp3')
 
 
 
@@ -121,11 +183,11 @@ function handleModalOpen(buttonIndex) {
 
         // Raqqamni to'g'ri formatlash va chiqarish
         let narx = parseInt(res.results[buttonIndex].price);
-        modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+        // modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
 
         let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
         skidka_narx = Math.round(skidka_narx);
-        modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
+        // modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
     }
 
     // Tovar sahifasi mavjudligini tekshirish

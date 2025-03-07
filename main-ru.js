@@ -14,7 +14,57 @@ menuIcon.addEventListener('click', function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const phoneInput = document.getElementById('phone');
+    const form = document.getElementById('phoneForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    // Маска ввода для телефона
+   
+  
+    // Отправка формы
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Простой пример проверки (проверка на 9 цифр, без учета символов)
+      const phoneValue = phoneInput.value.replace(/\D/g, '');
+      if (phoneValue.length > 12) {
+        formMessage.textContent = 'Пожалуйста, введите правильный номер телефона.';
+        formMessage.classList.add('error');
+      } else {
+        // Отправка данных на сервер
+        const formData = new FormData(form);
+        const data = {
+          phone: formData.get('phone')
+        };
+  
 
+        fetch('https://serverstorecallback.pythonanywhere.com/callback/', { // API/////////////////////////////////////////////////////////////////////////////
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            formMessage.textContent = 'Номер успешно отправлен. Выйдем на связь в скором времени'; // Сообщение об успешной отправки
+            formMessage.classList.remove('error');
+            formMessage.classList.add('success');
+            phoneInput.value = ''; // Очищаем поле ввода
+          } else {
+            formMessage.textContent = 'В выполнении этого действия случилась ошибка! Попробуйте Заново!'; // Сообщение об ошибке
+            formMessage.classList.add('error');
+          }
+        })
+        .catch(error => {
+          formMessage.textContent = 'В выполнении этого действия случилась ошибка! Попробуйте Заново!'; // Сообщение об ошибке
+          formMessage.classList.add('error');
+        });
+      }
+    });
+  });
 
 
 
@@ -85,8 +135,8 @@ function cr_element(){
     let modal_img = document.getElementById('modalimg')
     let modal_h1 = document.getElementById('modalh1')
     let modal_p1 = document.getElementById('modalp1')
-    let modal_p2 = document.getElementById('modalp2')
-    let modal_p3 = document.getElementById('modalp3')
+    // let modal_p2 = document.getElementById('modalp2')
+    // let modal_p3 = document.getElementById('modalp3')
     
     function formatNumber(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Minglar ajratish
@@ -113,11 +163,11 @@ function cr_element(){
     
             // Raqqamni to'g'ri formatlash va chiqarish
             let narx = parseInt(res.results[buttonIndex].price);
-            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+            // modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
     
             let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
             skidka_narx = Math.round(skidka_narx);
-            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
+            // modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
         }
     
         // Tovar sahifasi mavjudligini tekshirish

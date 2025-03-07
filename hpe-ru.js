@@ -59,8 +59,8 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                 let modal_img = document.getElementById('modalimg')
                 let modal_h1 = document.getElementById('modalh1')
                 let modal_p1 = document.getElementById('modalp1')
-                let modal_p2 = document.getElementById('modalp2')
-                let modal_p3 = document.getElementById('modalp3')
+                // let modal_p2 = document.getElementById('modalp2')
+                // let modal_p3 = document.getElementById('modalp3')
 
                 tovar_btn.addEventListener('click' ,()=>{
                     
@@ -74,11 +74,11 @@ fetch('https://serverstore.pythonanywhere.com/api/v1/products/').then(res=>res.j
                             modal_h1.innerHTML = res.results[i].model_name
                             modal_p1.innerHTML = res.results[i].name
                             let narx = parseInt(res.results[i].price);
-                            modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
+                            // modal_p2.innerHTML = formatNumber(narx) + ' Som'; 
 
                             let skidka_narx = addPercentage(narx, 40); // Narxga 40% qo'shish
                             skidka_narx = Math.round(skidka_narx);
-                            modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
+                            // modal_p3.innerHTML = formatNumber(skidka_narx) + ' Som';
                         }
                     }
                     

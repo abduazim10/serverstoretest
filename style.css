@@ -3,6 +3,186 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Основной стиль для формы */
+.phone-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* белый фон для формы */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 50px;
+  }
+
+  .phone-form:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Контейнеры для изображений */
+  .form-side-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-img {
+    max-width: 100%;
+    height: auto;
+    transform: rotateY(180deg); /* Поворот только этого изображения */
+  }
+  .form-img2 {
+    max-width: 100%;
+    height: auto;
+     /* Поворот только этого изображения */
+  }
+  
+  /* Контейнер для основной формы */
+  .form-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+  }
+  
+  /* Стиль для метки */
+  .phone-label {
+    font-size: 16px;
+    width: 200px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Стиль для поля ввода */
+  .phone-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #008084; /* цвет бордера #008084 */
+    border-radius: 4px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+  }
+  
+  .phone-input:focus {
+    border-color: #005b56; /* темный оттенок при фокусе */
+    outline: none;
+  }
+  
+  /* Стиль для кнопки отправки */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #008084; /* цвет кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005b56; /* темный оттенок при наведении */
+  }
+  
+  /* Стиль для сообщения */
+  .form-message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #28a745; /* Зеленый цвет для успешных сообщений */
+  }
+  
+  .form-message.error {
+    color: #dc3545; /* Красный цвет для ошибок */
+  }
+  
+  /* Адаптивность */
+  /* Адаптивность для экранов до 1100px */
+@media (max-width: 1100px) {
+    .phone-form {
+      width: 90%; /* Уменьшаем ширину формы для экранов меньше 1100px */
+      padding: 20px;
+    }
+  
+    .form-side-img {
+      display: none; /* Скрываем изображения */
+    }
+  
+    .form-content {
+      width: 100%; /* Ширина основной формы становится 100% */
+    }
+  
+    .phone-label {
+      font-size: 15px; /* Немного уменьшаем размер шрифта метки */
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .phone-input {
+      width: 50%; /* Поле ввода остается шире */
+      padding: 12px;
+      font-size: 15px;
+    }
+  
+    .submit-btn {
+      width: 50%; /* Кнопка по-прежнему занимает всю ширину */
+      padding: 12px;
+      font-size: 15px;
+    }
+  }
+  
+  
+  /* Адаптивность для экранов до 580px */
+@media (max-width: 580px) {
+    .phone-form {
+      width: 100%; /* Сделаем форму на весь экран */
+      flex-direction: column; /* Выставим форму в столбик */
+      align-items: center;
+      padding: 15px; /* Уменьшим отступы */
+    }
+  
+    .form-side-img {
+      display: none; /* Убираем изображения */
+    }
+  
+    .form-content {
+      width: 100%; /* Уменьшаем ширину контента */
+      padding: 0; /* Убираем внутренние отступы */
+    }
+  
+    /* Стиль для метки */
+    .phone-label {
+      font-size: 14px; /* Уменьшаем размер шрифта метки */
+      width: 100%; /* Ширина метки на весь контейнер */
+      margin-bottom: 8px; /* Меньше отступов */
+    }
+  
+    /* Стиль для поля ввода */
+    .phone-input {
+      width: 90%; /* Ширина поля ввода немного меньше */
+      padding: 10px; /* Меньше отступов */
+      font-size: 14px; /* Меньше шрифт */
+    }
+  
+    /* Стиль для кнопки отправки */
+    .submit-btn {
+      width: 90%; /* Сделаем кнопку шире */
+      padding: 10px; /* Меньше отступов */
+      font-size: 14px; /* Меньше шрифт */
+    }
+  }
+
+  
 header{
     width: 100%;
     height: 60px;
@@ -72,10 +252,7 @@ body{
     margin-right: 10px;
     display: none;
 }
-.icon2{
-    width: 45px;
-    
-}
+
 .poisk{
     width: 100%;
     background-color: white;
@@ -279,7 +456,7 @@ header {
 }
 
 .icon2 {
-    width: 45px;
+    width: 35px;
 }
 
 
